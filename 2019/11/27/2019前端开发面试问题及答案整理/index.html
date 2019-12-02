@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">2019前端开发面试问题及答案整理 | OK-girl</title>
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /*
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "OK-girl大胖";
+  mashiro_option.author_name = "大胖";
+  mashiro_option.site_url = "https://github.com/OK-girl";
+  mashiro_option.v_appId = "GMMVKeMsn8NOknvN2CioCQoa-gzGzoHsz";
+  mashiro_option.v_appKey = "lghSCo5USRxpoB6EJhzncXPK";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/";
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "/images/cover/bg1.jpg,/images/cover/bg2.jpg,/images/cover/bg3.jpg,/images/cover/bg4.jpg,/images/cover/bg5.jpg,/images/cover/bg6.jpg".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+</head>
+
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+<div class="scrollbar" id="bar">
+</div>
+<a href="#" class="cd-top faa-float animated"></a>
+<section id="main-container">
+    <div class="headertop">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="https://github.com/OK-girl" target="_blank" rel="noopener">
+          <img src="/images/custom/avatar.gif">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>日拱一卒无有尽, 功不唐捐终入海</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="/images/others/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="https://github.com/OK-girl" target="_blank" class="social-github" title="github">
+                    <img src="/images/social/s_github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="/images/social/s_wechat.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="/images/custom/donate/wechat.jpg">
+                  </div>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="/images/others/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+
+    <div id="page" class="site wrapper">
+        <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">OK-girl</span>
+            <span class="shironeko">大胖</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-reddit-alien" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive" aria-hidden="true"></i>
+                    文集
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/HTML&CSS/">
+                          <i class="fa fa-html5" aria-hidden="true"></i>
+                          HTML/CSS
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/JavaScript/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          JavaScript
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/%E7%A7%BB%E5%8A%A8%E7%AB%AF/">
+                          <i class="fa fa-gg" aria-hidden="true"></i>
+                          移动端
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF/">
+                          <i class="fa fa-mixcloud" aria-hidden="true"></i>
+                          服务端
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                          <i class="fa fa-database" aria-hidden="true"></i>
+                          数据库
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/%E5%85%B6%E5%AE%83/">
+                          <i class="fa fa-leaf" aria-hidden="true"></i>
+                          其它
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/%E4%B9%A6%E5%8D%95/">
+                          <i class="fa fa-book" aria-hidden="true"></i>
+                          书单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/%E7%A8%8B%E5%BA%8F%E4%BA%BA%E7%94%9F/">
+                          <i class="fa fa-flag-o" aria-hidden="true"></i>
+                          程序人生
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/categories/%E9%97%AE%E7%AD%94/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-tripadvisor" aria-hidden="true"></i>
+                    问答
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/tools/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-cubes" aria-hidden="true"></i>
+                    开发工具
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/tags/%E7%94%9F%E6%B4%BB">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-slideshare" aria-hidden="true"></i>
+                    生活
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/picture/">
+                          <i class="fa fa-image" aria-hidden="true"></i>
+                          图库
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/music/">
+                          <i class="fa fa-music" aria-hidden="true"></i>
+                          歌单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/movie/">
+                          <i class="fa fa-video-camera" aria-hidden="true"></i>
+                          影集
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-twitch" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/about">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-meetup" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+        <!-- 文章内容 -->
+<div class="pattern-center-blank"></div>
+<!-- banner container -->
+<div class="banner-container no-img">
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+        
+            <div class="banner-content post-content no-post-image">
+                <div class="post-text">
+                    <div class="type-wrap">
+                        <a class="article-category-link" href="/categories/%E9%97%AE%E7%AD%94/">问答</a>
+                    </div>
+                    <h1 class="title-wrap">2019前端开发面试问题及答案整理</h1>
+                    <div class="meta-wrap">
+                        <strong>Leatitia</strong>
+                        <span>发布于</span>
+                        
+  <a href="javascript:;" class="article-date">
+    <time datetime="2019-11-27T12:47:39.000Z" itemprop="datePublished">2019-11-27</time>
+  </a>
+
+                    </div>
+                </div>
+            </div>
+        
+    
+
+    
+    
+
+</div>
+
+<div class="body-container">
+    <article id="article-content" class="main-container article-content">
+        
+        
+
+        <div class="entry-content">
+            <h2 id="JS-相关"><a href="#JS-相关" class="headerlink" title="JS 相关"></a>JS 相关</h2><h3 id="1-对闭包的理解"><a href="#1-对闭包的理解" class="headerlink" title="1.对闭包的理解"></a>1.对闭包的理解</h3><p>使用闭包主要是为了设计私有的方法和变量。</p>
+<ul>
+<li><strong>优点</strong>：可以避免全局变量的污染</li>
+<li><strong>缺点</strong>：闭包会常驻内存，会增大内存使用量，使用不当很容易造成内存泄露。</li>
+<li><strong>特性</strong>:<ul>
+<li>函数嵌套函数 </li>
+<li>函数内部可以引用外部的参数和变量 </li>
+<li>参数和变量不会被垃圾回收机制回收</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-谈谈Cookie的弊端"><a href="#2-谈谈Cookie的弊端" class="headerlink" title="2.谈谈Cookie的弊端"></a>2.谈谈<code>Cookie</code>的弊端</h3><p>cookie虽然在持久保存客户端数据提供了方便，分担了服务器存储的负担，但cookie的最大大约为4096字节，为了兼容性，一般不能超过4095字节：</p>
+<blockquote>
+<ul>
+<li>IE6或更低版本最多20个cookie， IE7和之后的版本最后可以有50个cookie， Firefox最多50个cookie，每个cookie长度不能超过4KB，否则会被截掉</li>
+<li>chrome和Safari没有做硬性限制复制代码</li>
+<li>IE和Opera 会清理近期最少使用的cookie，Firefox会随机清理cookie。</li>
+</ul>
+</blockquote>
+<ul>
+<li><p>优点：极高的扩展性和可用性（安全处理）</p>
+<ul>
+<li>通过良好的编程，控制保存在cookie中的session对象的大小。</li>
+<li>通过加密和安全传输技术（SSL），减少cookie被破解的可能性。</li>
+<li>cookie中存放不敏感数据，即使被盗也不会有重大损失。</li>
+<li>控制cookie的生命期，使之不会永远有效</li>
+</ul>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>数量和长度的限制。</li>
+<li>安全性问题。如果cookie被人拦截了，那人就可以取得所有的session信息。</li>
+<li>有些状态不可能保存在客户端。例如计数器</li>
+</ul>
+<p><em>扩展：userdata（IE 提供的一种存储可以持久化用户数据），从IE5.0就开始支持。每个数据最多128K，每个域名下最多1M。这个持久化数据放在缓存中，如果缓存没有清理，那么会一直存在。</em></p>
+<h3 id="3-浏览器本地存储"><a href="#3-浏览器本地存储" class="headerlink" title="3.浏览器本地存储"></a>3.浏览器本地存储</h3><p>html5中的Web Storage包括了两种存储方式：sessionStorage和localStorage（替代原先的globalStorage）。</p>
+</li>
+<li><p><code>sessionStorage</code>（会话级别的存储）：用于本地存储一个会话（session）中的数据，这些数据只有在同一个会话中的页面才能访问并且当会话结束后数据也随之销毁；</p>
+</li>
+<li><p><code>localStorage</code>：用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的。</p>
+</li>
+</ul>
+<h3 id="4-web-storage和cookie的区别"><a href="#4-web-storage和cookie的区别" class="headerlink" title="4.web storage和cookie的区别"></a>4.<code>web storage</code>和<code>cookie</code>的区别</h3><p>Web Storage的概念和cookie相似，区别是它是为了更大容量存储设计的。</p>
+<ul>
+<li><code>Cookie</code>的大小是受限的，并且每次请求新页面时都会被发送，浪费带宽；另外cookie还需要指定作用域，不可以跨域调用。</li>
+<li><code>Web Storage</code>拥有<code>setItem,getItem,removeItem,clear</code>等方法，<code>cookie</code>需要前端开发者自己封装setCookie，getCookie。</li>
+<li><code>cookie</code>的作用是与服务器进行交互，作为HTTP规范的一部分而存在 ，而<code>Web Storage</code>仅仅是为了在本地“存储”数据而生</li>
+</ul>
+<h3 id="5-cookie-和session-的区别："><a href="#5-cookie-和session-的区别：" class="headerlink" title="5.cookie 和session 的区别："></a>5.<code>cookie</code> 和<code>session</code> 的区别：</h3><ul>
+<li>cookie数据存放在客户的浏览器上，session数据放在服务器上。</li>
+<li>cookie不是很安全，别人可以分析存放在本地的cookie并进行cookie欺骗（考虑到安全应当使用session）。</li>
+<li>session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能（考虑到减轻服务器性能方面，应当使用cookie）</li>
+<li>单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie。<blockquote>
+<p>建议：登陆信息等重要信息存放为session;其他信息如果需要保留，可以放在cookie中</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="CSS相关"><a href="#CSS相关" class="headerlink" title="CSS相关"></a>CSS相关</h2><h3 id="1-display-none和visibility-hidden"><a href="#1-display-none和visibility-hidden" class="headerlink" title="1.display:none和visibility:hidden"></a>1.<code>display:none</code>和<code>visibility:hidden</code></h3><ul>
+<li><code>display:none</code>：  隐藏对应的元素，在文档布局中不再给它分配空间，它各边的元素会合拢，就当他从来不存在。</li>
+<li><code>visibility:hidden</code>：  隐藏对应的元素，但是在文档布局中仍保留原来的空间<h3 id="2-CSS中-link-和-import"><a href="#2-CSS中-link-和-import" class="headerlink" title="2.CSS中 link 和@import"></a>2.CSS中 <code>link</code> 和<code>@import</code></h3></li>
+<li><code>link</code>属于<code>HTML</code>标签，而<code>@import</code>是<code>CSS</code>提供的; </li>
+<li>页面被加载的时，<code>link</code>会同时被加载，而<code>@import</code>引用的CSS会等到页面被加载完再加载;</li>
+<li><code>import</code>只在IE5以上才能识别，而<code>link</code>是HTML标签，无兼容问题; </li>
+<li><code>link</code>方式的样式的权重 高于<code>@import</code>的权重.复制代码<h3 id="3-position-absolute和float属性"><a href="#3-position-absolute和float属性" class="headerlink" title="3.position:absolute和float属性"></a>3.<code>position:absolute</code>和<code>float</code>属性</h3></li>
+<li>共同点：<br>对内联元素设置<code>float</code>和<code>absolute</code>属性，可以让元素脱离文档流，并且可以设置其宽高。<ul>
+<li>不同点：<br>float仍会占据位置，position会覆盖文档流中的其他元素。复制代码<h3 id="4-box-sizing属性"><a href="#4-box-sizing属性" class="headerlink" title="4.box-sizing属性"></a>4.<code>box-sizing</code>属性</h3><code>box-sizing</code>：属性主要用来控制元素的盒模型的解析模式。默认值是<code>content-box</code>。</li>
+</ul>
+</li>
+<li><code>content-box</code>：W3C的标准盒模型。元素的宽度/高度由<code>border + padding + content</code>的宽度/高度决定，设置<code>width/height</code>属性指的是<code>content</code>部分的宽/高</li>
+<li><code>border-box</code>：IE传统盒模型（IE6以下版本和IE6~7的怪异模式）。设置<code>width/height</code>属性指的是<code>border + padding + content</code></li>
+</ul>
+<blockquote>
+<p>标准浏览器下，按照W3C规范对盒模型解析，一旦修改了元素的边框或内距，就会影响元素的盒子尺寸，就不得不重新计算元素的盒子尺寸，从而影响整个页面的布局。</p>
+</blockquote>
+<h3 id="5-CSS-继承属性、优先级"><a href="#5-CSS-继承属性、优先级" class="headerlink" title="5.CSS 继承属性、优先级"></a>5.CSS 继承属性、优先级</h3><ul>
+<li>可继承的样式： font-size font-family color, text-indent;<br>不可继承的样式：border padding margin width height ;</li>
+<li>优先级就近原则，同权重情况下样式定义最近者为准;载入样式以最后载入的定位为准;<code>!important&gt;内联 &gt;  id &gt; class &gt; tag</code>；</li>
+</ul>
+<h3 id="6-relative和absolute定位"><a href="#6-relative和absolute定位" class="headerlink" title="6.relative和absolute定位"></a>6.<code>relative</code>和<code>absolute</code>定位</h3><ul>
+<li><code>absolute</code>：绝对定位的元素， 相对于最近一级的定位不是 static 的父元素来进行定位。</li>
+<li><code>fixed</code> （老IE不支持）：绝对定位的元素，相对于浏览器窗口进行定位。 </li>
+<li><code>relative</code> ：相对定位的元素，相对于其在普通流中的位置进行定位。 </li>
+<li><code>static</code>  默认值。没有定位，元素出现在正常的流中<h3 id="7-XML和JSON的区别？"><a href="#7-XML和JSON的区别？" class="headerlink" title="7. XML和JSON的区别？"></a>7. <code>XML</code>和<code>JSON</code>的区别？</h3></li>
+<li><code>JSON</code>相对于<code>XML</code>来讲，数据的体积小，传递的速度更快些。</li>
+<li><code>JSON</code>与<code>JavaScript</code>的交互更加方便，更容易解析处理，更好的数据交互。</li>
+<li><code>JSON</code>对数据的描述性比XML较差。</li>
+<li><code>JSON</code>的速度要远远快于<code>XML</code>。复制代码<h3 id="8-对BFC规范的理解？"><a href="#8-对BFC规范的理解？" class="headerlink" title="8.对BFC规范的理解？"></a>8.对<code>BFC</code>规范的理解？</h3><blockquote>
+<p><code>BFC</code>，块级格式化上下文，一个创建了新的BFC的盒子是独立布局的，盒子里面的子元素的样式不会影响到外面的元素。在同一个BFC中的两个毗邻的块级盒在垂直方向（和布局方向有关系）的margin会发生折叠（<strong>margin塌陷</strong>）</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="9-CSS-sprites"><a href="#9-CSS-sprites" class="headerlink" title="9.CSS sprites"></a>9.<code>CSS sprites</code></h3><blockquote>
+<p><code>CSS Sprites</code>：把网页中一些背景图片整合到一张图片文件中，再利用CSS的<code>“background-image”，“background- repeat”，“background-position”</code>的组合进行背景定位，<code>background-position</code>可以用数字能精确的定位出背景图片的位置。</p>
+</blockquote>
+<ul>
+<li><strong>优点</strong>：减少很多图片请求的开销，因为请求耗时比较长；</li>
+<li><strong>缺点</strong>：修改图片不好处理</li>
+</ul>
+<h3 id="10-对语义化的理解？"><a href="#10-对语义化的理解？" class="headerlink" title="10.对语义化的理解？"></a>10.对语义化的理解？</h3><ul>
+<li>去掉或者丢失样式的时候能够让页面呈现出清晰的结构</li>
+<li>有利于<strong>SEO</strong>：和搜索引擎建立良好沟通，有助于爬虫抓取更多的有效信息：爬虫依赖于标签来确定上下文和各个关键字的权重；</li>
+<li>方便其他设备解析（如屏幕阅读器、盲人阅读器、移动设备）以意义的方式来渲染网页；</li>
+<li>便于团队开发和维护，语义化更具可读性，是下一步吧网页的重要动向，遵循W3C标准的团队都遵循这个标准，可以减少差异化。<h3 id="11-Doctype作用-严格模式与混杂模式区分"><a href="#11-Doctype作用-严格模式与混杂模式区分" class="headerlink" title="11.Doctype作用? 严格模式与混杂模式区分"></a>11.<code>Doctype</code>作用? 严格模式与混杂模式区分</h3>（1） <code>&lt;!DOCTYPE&gt;</code> 声明位于文档中的最前面，处于 <code>&lt;html&gt;</code> 标签之前。告知浏览器以何种模式来渲染文档。<br>（2）严格模式与混杂模式区别</li>
+<li>严格模式的排版和 JS 运作模式： 以该浏览器支持的最高标准运行。</li>
+<li>在混杂模式中，页面以宽松的向后兼容的方式显示。模拟老式浏览器的行为以防止站点无法工作。</li>
+<li><code>DOCTYPE</code>不存在或格式不正确会导致文档以混杂模式呈现</li>
+</ul>
+<h3 id="12-常见兼容性问题？"><a href="#12-常见兼容性问题？" class="headerlink" title="12.常见兼容性问题？"></a>12.常见兼容性问题？</h3><ul>
+<li><p><code>png24位</code>的图片在IE6浏览器上出现背景，解决方案是做成PNG8.也可以引用一段脚本处理.</p>
+</li>
+<li><p>浏览器默认的<code>margin</code>和<code>padding</code>不同。解决方案是加一个全局的<code>*{margin:0;padding:0;}</code>来统一。</p>
+</li>
+<li><p>IE6双边距bug：块属性标签float后，又有横行的<code>margin</code>情况下，在IE6显示margin比设置的大。 </p>
+</li>
+<li><p>浮动IE产生的双倍距离（IE6双边距问题：在IE6下，如果对元素设置了浮动，同时又设置了<code>margin-left</code>或<code>margin-right</code>，<code>margin</code>值会加倍。）</p>
+<pre><code class="css">#box{ float:left; width:10px; margin:0 0 0 100px;} 
+/*这种情况之下IE会产生20px的距离，解决方案是在float的标签样式控制中加入 ——_display:inline;将其转化为行内属性。(_这个符号只有ie6会识别)*/</code></pre>
+</li>
+<li><p>渐进识别的方式，从总体中逐渐排除局部。 </p>
+<p>首先，巧妙的使用<code>“\9”</code>这一标记，将IE游览器从所有情况中分离出来。<br>接着，再次使用<code>“+”</code>将IE8和IE7、IE6分离开来，这样IE8已经独立识别。</p>
+</li>
+</ul>
+<pre><code class="css">.bb{
+     background-color:#f1ee18;/*所有识别*/
+    .background-color:#00deff\9; /*IE6、7、8识别*/
+    +background-color:#a200ff;/*IE6、7识别*/
+    _background-color:#1e0bd1;/*IE6识别*/ 
+ }     </code></pre>
+<ul>
+<li><p>IE下,可以使用获取常规属性的方法来获取自定义属性, 也可以使用<code>getAttribute()</code>获取自定义属性; Firefox下,只能使用<code>getAttribute()</code>获取自定义属性.<br><strong>解决方法</strong>：统一通过getAttribute()获取自定义属性.</p>
+</li>
+<li><p>IE下,<code>event</code>对象有<code>x,y</code>属性,但是没有<code>pageX,pageY</code>属性;<br>Firefox下,<code>event</code>对象有<code>pageX,pageY</code>属性,但是没有<code>x,y</code>属性.</p>
+</li>
+<li><p><em>解决方法*</em>：（条件注释）缺点是在IE浏览器下可能会增加额外的HTTP请求数。</p>
+</li>
+<li><p>Chrome 中文界面下默认会将小于 12px 的文本强制按照 12px 显示,<br>可通过加入 CSS 属性 <code>-webkit-text-size-adjust: none;</code>解决.</p>
+</li>
+<li><p>超链接访问过后<code>hover</code>样式就不出现了 被点击访问过的超链接样式不在具有hover和active了解决方法是改变CSS属性的排列顺序:<br><code>L-V-H-A :  a:link {} a:visited {} a:hover {} a:active {}</code></p>
+</li>
+<li><p>怪异模式问题：漏写DTD声明，Firefox仍然会按照标准模式来解析网页，但在IE中会触发怪异模式。</p>
+</li>
+<li><p>上下margin重合问题<br>ie和ff都存在，相邻的两个div的<code>margin-left</code>和<code>margin-right</code>不会重合，但是<code>margin-top</code>和<code>margin-bottom</code>却会发生重合。</p>
+</li>
+<li><p><em>解决方法*</em>：养成良好的代码编写习惯，同时采用margin-top或者同时采用margin-bottom。</p>
+</li>
+<li><p>ie6对png图片格式支持不好(引用一段脚本处理)</p>
+<h3 id="13-清除浮动的技巧"><a href="#13-清除浮动的技巧" class="headerlink" title="13.清除浮动的技巧"></a>13.清除浮动的技巧</h3><blockquote>
+<p>浮动基本原理：浮动元素脱离文档流，不占据空间。浮动元素碰到包含它的边框或者浮动元素的边框停留。</p>
+</blockquote>
+</li>
+</ul>
+<p>清除浮动方法：</p>
+<ul>
+<li>使用空标签清除浮动：在所有浮动标签后面添加一个空标签，定义css <code>clear:both</code>。 弊端：增加了无意义标签。</li>
+<li>使用<code>overflow</code>：给包含浮动元素的父标签添加css属性 <code>overflow:auto; zoom:1; zoom:1</code>用于兼容IE6。</li>
+<li>使用after伪对象清除浮动：只适用非IE浏览器。<ul>
+<li>该方法中必须为需要清除浮动元素的伪对象中设置 <code>height:0</code>，否则该元素会比实际高出若干像素；<h3 id="14-浮动元素引起的问题和解决办法？"><a href="#14-浮动元素引起的问题和解决办法？" class="headerlink" title="14.浮动元素引起的问题和解决办法？"></a>14.浮动元素引起的问题和解决办法？</h3></li>
+</ul>
+</li>
+<li>浮动元素引起的问题：<ul>
+<li>父元素的高度无法被撑开，影响与父元素同级的元素</li>
+<li>与浮动元素同级的非浮动元素（内联元素）会跟随其后</li>
+<li>若非第一个元素浮动，则该元素之前的元素也需要浮动，否则会影响页面显示的结构</li>
+</ul>
+</li>
+<li>解决方法：<ul>
+<li>使用CSS中的clear:both;属性来清除元素的浮动可解决2、3问题</li>
+<li>对于问题1，添加如下样式，给父元素添加clearfix样式：</li>
+</ul>
+</li>
+</ul>
+<pre><code class="css">.clearfix:after{
+    content: &quot;.&quot;;
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    }
+.clearfix{
+    display: inline-block;
+} /* for IE/Mac */</code></pre>
+<ul>
+<li>清除浮动的几种方法：<ul>
+<li>额外标签法，<code>&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;</code>（缺点：不过这个办法会增加额外的标签使HTML结构看起来不够简洁）</li>
+<li>浮动外部元素</li>
+<li>设置<code>overflow</code>为<code>hidden</code>或者<code>auto</code></li>
+<li>使用<code>after</code>伪类<pre><code class="css">#parent:after{
+content:&quot;.&quot;;
+height:0;
+visibility:hidden;
+display:block;
+clear:both;
+}</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="15-DOM操作"><a href="#15-DOM操作" class="headerlink" title="15.DOM操作"></a>15.DOM操作</h3><ul>
+<li><p>创建新节点</p>
+<blockquote>
+<p><code>createDocumentFragment()</code>   //创建一个DOM片段<br><code>createElement()</code>   //创建一个具体的元素<br><code>createTextNode()</code>   //创建一个文本节点</p>
+</blockquote>
+</li>
+<li><p>添加、移除、替换、插入 </p>
+<blockquote>
+<p><code>appendChild()</code><br><code>removeChild()</code><br><code>replaceChild()</code><br><code>insertBefore()</code>//在已有的子节点前插入一个新的子节点</p>
+</blockquote>
+</li>
+<li><p>查找</p>
+<blockquote>
+<p><code>getElementsByTagName()</code>    //通过标签名称<br><code>getElementsByName()</code>   //通过元素的Name属性的值(IE容错能力较强，会得到一个数组，其中包括id等于name值的)<br><code>getElementById()</code>    //通过元素Id，唯一性复制代码</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="16-html5相关问题？"><a href="#16-html5相关问题？" class="headerlink" title="16.html5相关问题？"></a>16.<code>html5</code>相关问题？</h3><ul>
+<li>支持HTML5新标签：</li>
+</ul>
+<ul>
+<li>IE8/IE7/IE6支持通过document.createElement方法产生的标签，可利用该特性让这些浏览器支持HTML5新标签</li>
+<li>添加标签默认的样式：最好的方式是直接使用成熟的框架、使用最多的是html5shim框架<pre><code class="html"> &lt;!--[if lt IE 9]&gt; 
+ &lt;script&gt; src=&quot;http://html5shim.googlecode.com/svn/trunk/html5.js&quot;&lt;/script&gt; 
+ &lt;![endif]--&gt; </code></pre>
+</li>
+</ul>
+<h3 id="17-iframe的优缺点？"><a href="#17-iframe的优缺点？" class="headerlink" title="17.iframe的优缺点？"></a>17.<code>iframe</code>的优缺点？</h3><ul>
+<li><p><code>&lt;iframe&gt;</code>优点：</p>
+<ul>
+<li>解决加载缓慢的第三方内容如图标和广告等的加载问题<ul>
+<li><code>Security sandbox</code></li>
+<li>并行加载脚本</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>&lt;iframe&gt;</code>的缺点：</p>
+<ul>
+<li><code>iframe</code>会阻塞主页面的<code>Onload</code>事件；</li>
+<li>即使内容为空，加载也需要时间</li>
+<li>没有语意</li>
+</ul>
+</li>
+</ul>
+<h3 id="18-实现浏览器多个标签页通信"><a href="#18-实现浏览器多个标签页通信" class="headerlink" title="18. 实现浏览器多个标签页通信"></a>18. 实现浏览器多个标签页通信</h3><p>调用localstorge、cookies等本地存储方式</p>
+<h3 id="19-线程与进程的区别"><a href="#19-线程与进程的区别" class="headerlink" title="19.线程与进程的区别"></a>19.线程与进程的区别</h3><p>一个程序至少有一个进程,一个进程至少有一个线程.<br>线程的划分尺度小于进程，使得多线程程序的并发性高。<br>另外，进程在执行过程中拥有独立的内存单元，而多个线程共享内存，从而极大地提高了程序的运行效率。<br>线程在执行过程中与进程还是有区别的。每个独立的线程有一个程序运行的入口、顺序执行序列和程序的出口。但是线程不能够独立执行，必须依存在应用程序中，由应用程序提供多个线程执行控制。<br>从逻辑角度来看，多线程的意义在于一个应用程序中，有多个执行部分可以同时执行。但操作系统并没有将多个线程看做多个独立的应用，来实现进程的调度和管理以及资源分配。这就是进程和线程的重要区别。复制代码</p>
+<h3 id="20-对网站文件和资源进行优化"><a href="#20-对网站文件和资源进行优化" class="headerlink" title="20.对网站文件和资源进行优化"></a>20.对网站文件和资源进行优化</h3><ul>
+<li>文件合并</li>
+<li>文件最小化/文件压缩</li>
+<li>使用 CDN 托管</li>
+<li>缓存的使用（多个域名来提供缓存）</li>
+</ul>
+<h3 id="21-减少页面加载时间的方法"><a href="#21-减少页面加载时间的方法" class="headerlink" title="21.减少页面加载时间的方法"></a>21.减少页面加载时间的方法</h3><ul>
+<li>优化图片 </li>
+<li>图像格式的选择（GIF：提供的颜色较少，可用在一些对颜色要求不高的地方） </li>
+<li>优化CSS（压缩合并css，如margin-top,margin-left…) </li>
+<li>网址后加斜杠（如<a href="http://www.campr.com/目录，会判断这个“目录是什么文件类型，或者是目录。）" target="_blank" rel="noopener">www.campr.com/目录，会判断这个“目录是什么文件类型，或者是目录。）</a> </li>
+<li>标明高度和宽度（如果浏览器没有找到这两个参数，它需要一边下载图片一边计算大小，如果图片很多，浏览器需要不断地调整页面。这不但影响速度，也影响浏览体验。<br>当浏览器知道了高度和宽度参数后，即使图片暂时无法显示，页面上也会腾出图片的空位，然后继续加载后面的内容。从而加载时间快了，浏览体验也更好了。） </li>
+<li>减少http请求（合并文件，合并图片）</li>
+</ul>
+<h3 id="22-FOUC（无样式内容闪烁）"><a href="#22-FOUC（无样式内容闪烁）" class="headerlink" title="22.FOUC（无样式内容闪烁）"></a>22.<code>FOUC</code>（无样式内容闪烁）</h3><p> <code>FOUC</code> - Flash Of Unstyled Content 文档样式闪烁<br> <code>&lt;style type=&quot;text/css&quot; media=&quot;all&quot;&gt;@import &quot;../fouc.css&quot;;&lt;/style&gt;</code><br>而引用CSS文件的<code>@import</code>就是造成这个问题的罪魁祸首。IE会先加载整个HTML文档的DOM，然后再去导入外部的CSS文件，因此，在页面DOM加载完成到CSS导入完成中间会有一段时间页面上的内容是没有样式的，这段时间的长短跟网速，电脑速度都有关系。<br> 解决方法简单的出奇，只要在<code>&lt;head&gt;</code>之间加入一个<code>&lt;link&gt;</code>或者<code>&lt;script&gt;</code>元素就可以了</p>
+<h3 id="23-null和undefined的区别"><a href="#23-null和undefined的区别" class="headerlink" title="23.null和undefined的区别"></a>23.<code>null</code>和<code>undefined</code>的区别</h3><ul>
+<li><p><code>null</code>是一个表示”无”的对象，转为数值时为0；<code>undefined</code>是一个表示”无”的原始值，转为数值时为<code>NaN</code>。</p>
+</li>
+<li><p>当声明的变量还未被初始化时，变量的默认值为<code>undefined</code>。 <code>null</code>用来表示尚未存在的对象，常用来表示函数企图返回一个不存在的对象。</p>
+</li>
+<li><p><code>undefined</code>表示”缺少值”，就是此处应该有一个值，但是还没有定义。典型用法是：</p>
+<ul>
+<li>变量被声明了，但没有赋值时，就等于<code>ndefined</code></li>
+<li>调用函数时，应该提供的参数没有提供，该参数等于<code>undefined</code></li>
+<li>对象没有赋值的属性，该属性的值为<code>undefined</code></li>
+<li>函数没有返回值时，默认返回undefined</li>
+</ul>
+</li>
+<li><p><code>null</code>表示”没有对象”，即该处不应该有值。典型用法是：</p>
+<ul>
+<li>作为函数的参数，表示该函数的参数不是对象</li>
+<li>作为对象原型链的终点。</li>
+</ul>
+</li>
+</ul>
+<h3 id="24-new操作符具体作用"><a href="#24-new操作符具体作用" class="headerlink" title="24.new操作符具体作用"></a>24.<code>new</code>操作符具体作用</h3><ul>
+<li>创建一个空对象，并且 <code>this</code> 变量引用该对象，同时还继承了该函数的原型。</li>
+<li>属性和方法被加入到<code>this</code> 引用的对象中。</li>
+<li>新创建的对象由 <code>this</code> 所引用，并且最后隐式的返回 <code>this</code>。<pre><code class="js">var obj  = {};
+obj.__proto__ = Base.prototype;
+Base.call(obj);</code></pre>
+</li>
+</ul>
+<h3 id="25-js延迟加载的方式"><a href="#25-js延迟加载的方式" class="headerlink" title="25. js延迟加载的方式"></a>25. js延迟加载的方式</h3><ul>
+<li><code>defer</code></li>
+<li><code>async</code></li>
+<li>动态创建DOM方式（创建script，插入到DOM中，加载完毕后callBack）</li>
+<li>按需异步载入js<h3 id="26-如何解决跨域"><a href="#26-如何解决跨域" class="headerlink" title="26.如何解决跨域"></a>26.如何解决跨域</h3></li>
+<li><code>jsonp</code>：原理是动态插入script标签</li>
+<li><code>document.domain</code>+<code>iframe</code></li>
+<li><code>window.name</code></li>
+<li><code>window.postMessage</code></li>
+<li>服务器上设置代理页面</li>
+</ul>
+<h3 id="27-call-、bind、-apply"><a href="#27-call-、bind、-apply" class="headerlink" title="27.call 、bind、 apply"></a>27.<code>call</code> 、<code>bind</code>、 <code>apply</code></h3><ul>
+<li><strong>作用</strong>：动态改变某个类的某个方法的运行环境（即改变<code>this</code>指向）</li>
+<li><strong>相同</strong>：<code>call</code> 、<code>bind</code>、 <code>apply</code>这三个函数的第一个参数都是 this 的指向对象</li>
+<li><strong>区别</strong>：接收参数不同<ul>
+<li><code>call()</code>：传递给函数的参数必须逐个列举出来</li>
+<li><code>apply()</code>：传递给函数的是参数数组</li>
+<li><code>bind</code>除了返回是函数以外，它 的参数和<code>call</code> 一样</li>
+</ul>
+</li>
+</ul>
+<h3 id="28-哪些操作会造成内存泄漏"><a href="#28-哪些操作会造成内存泄漏" class="headerlink" title="28.哪些操作会造成内存泄漏"></a>28.哪些操作会造成内存泄漏</h3><ul>
+<li><strong>内存泄漏</strong>：指任何对象在不再拥有或需要它之后仍然存在；</li>
+<li><strong>垃圾回收</strong>：垃圾回收器定期扫描对象，并计算引用了每个对象的其他对象的数量。如果一个对象的引用数量为 0（没有其他对象引用过该对象），或对该对象的惟一引用是循环的，那么该对象的内存即可回收。</li>
+<li><strong>操作</strong><ul>
+<li><code>setTimeout</code> 的第一个参数使用字符串而非函数的话，会引发内存泄漏。</li>
+<li>闭包、控制台日志、循环（在两个对象彼此引用且彼此保留时，就会产生一个循环</li>
+</ul>
+</li>
+</ul>
+<h3 id="29-J作用域与变量声明提升"><a href="#29-J作用域与变量声明提升" class="headerlink" title="29. J作用域与变量声明提升"></a>29. J作用域与变量声明提升</h3>
+        </div>
+
+        <div class="article-footer">
+            <i class="fa fa-tags"></i>
+            
+                <a href="/tags/%E9%97%AE%E7%AD%94/">问答<em>·</em></a>
+            
+                <a href="/tags/Hot/">Hot<em>·</em></a>
+            
+        </div>
+
+        <div class="article-navs">
+            <!-- page container -->
+
+  
+    <nav class="card-container card-article-nav">
+      <div class="card-wrap">
+        
+          <div class="card-item">
+            <article>
+              
+              <a class="card-link article-nav-link" href="/2019/11/29/2019%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98%E5%8F%8A%E7%AD%94%E6%A1%88%E6%95%B4%E7%90%86%EF%BC%88%E4%BA%8C%EF%BC%89/"></a>
+              <div class="article-nav-caption">Newer</div>
+              <div class="article-nav-title">2019前端开发面试问题及答案整理（二）</div>
+            </article>
+          </div>
+        
+        
+          <div class="card-item">
+            <article>
+              
+              <a class="card-link article-nav-link" href="/2019/11/27/%E7%94%9C%E4%B9%96/"></a>
+              <div class="article-nav-caption">Older</div>
+              <div class="article-nav-title">甜乖</div>
+            </article>
+          </div>
+        
+      </div>
+    </nav>
+  
+
+
+        </div>
+        
+
+    </article>
+</div>
+
+
+    </div>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            // PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Leatitia<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+    <div class="site-info">
+        <div class="footertext">
+            <div class="img-preload">
+                <img src="/images/others/wordpress-rotating-ball-o.svg">
+                <img src="/images/others/disqus-preloader.svg">
+            </div>
+            <p style="color: #666666;">&copy 2019 OK-girl</p>
+        </div>
+        <div class="footer-device">
+            <!--<p style="font-family: 'Ubuntu', sans-serif;">-->
+            <!--<span style="color: #b9b9b9;">Powered by <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">hexo-theme-sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i>-->
+            <!--</span>-->
+            <!--</p>-->
+        </div>
+    </div><!-- .site-info -->
+</footer>
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+    /* <![CDATA[ */
+    if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+        var Poi = {
+            "pjax": "1",
+            "movies": {"url": "/video", "name": "ban1.mp4,ban2.mp4", "live": "close"},
+            "windowheight": "fixed",
+            "codelamp": "close",
+            "ajaxurl": "",
+            "order": "asc",
+            "formpostion": "bottom"
+        };
+    } else {
+        var Poi = {
+            "pjax": "1",
+            "movies": {"url": "/video", "name": "ban1.mp4,ban2.mp4", "live": "open"},
+            "windowheight": "auto",
+            "codelamp": "close",
+            "ajaxurl": "",
+            "order": "asc",
+            "formpostion": "bottom"
+        };
+    }
+    /* ]]> */
+
+</script>
+<script>
+    $(document).ready(function () {
+        if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+            if ($(".pattern-center").length > 0) { //有图的情况
+                tocbot.init({
+                    // Where to render the table of contents.
+                    tocSelector: '.toc', // 放置目录的容器
+                    // Where to grab the headings to build the table of contents.
+                    contentSelector: '.entry-content', // 正文内容所在
+                    // Which headings to grab inside of the contentSelector element.
+                    scrollSmooth: true,
+                    headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+                    headingsOffset: -400,
+                    scrollSmoothOffset: -85
+                });
+            } else {
+                tocbot.init({
+                    // Where to render the table of contents.
+                    tocSelector: '.toc', // 放置目录的容器
+                    // Where to grab the headings to build the table of contents.
+                    contentSelector: '.entry-content', // 正文内容所在
+                    // Which headings to grab inside of the contentSelector element.
+                    scrollSmooth: true,
+                    headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+                    headingsOffset: -85,
+                    scrollSmoothOffset: -85
+                });
+            }
+            var offsetTop = $('.toc').offset().top - 95;
+            window.onscroll = function () {
+                var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+                if (scrollTop >= offsetTop) {
+                    $('.toc').addClass('toc-fixed');
+                } else {
+                    $('.toc').removeClass('toc-fixed');
+                }
+            }
+        }
+    });
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+        <div class="iconflat no-select" style="width: 50px; height: 50px;">
+            <div class="icon"></div>
+        </div>
+        <div class="site-branding search-form-submit">
+            <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+        </div>
+    </div>
+</section>
+</body>
+</html>

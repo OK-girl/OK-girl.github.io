@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">2019前端开发面试问题及答案整理（二） | OK-girl</title>
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /*
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "OK-girl大胖";
+  mashiro_option.author_name = "大胖";
+  mashiro_option.site_url = "https://github.com/OK-girl";
+  mashiro_option.v_appId = "GMMVKeMsn8NOknvN2CioCQoa-gzGzoHsz";
+  mashiro_option.v_appKey = "lghSCo5USRxpoB6EJhzncXPK";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/";
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "/images/cover/bg1.jpg,/images/cover/bg2.jpg,/images/cover/bg3.jpg,/images/cover/bg4.jpg,/images/cover/bg5.jpg,/images/cover/bg6.jpg".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+</head>
+
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+<div class="scrollbar" id="bar">
+</div>
+<a href="#" class="cd-top faa-float animated"></a>
+<section id="main-container">
+    <div class="headertop">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="https://github.com/OK-girl" target="_blank" rel="noopener">
+          <img src="/images/custom/avatar.gif">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>日拱一卒无有尽, 功不唐捐终入海</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="/images/others/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="https://github.com/OK-girl" target="_blank" class="social-github" title="github">
+                    <img src="/images/social/s_github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="/images/social/s_wechat.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="/images/custom/donate/wechat.jpg">
+                  </div>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="/images/others/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+
+    <div id="page" class="site wrapper">
+        <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">OK-girl</span>
+            <span class="shironeko">大胖</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-reddit-alien" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive" aria-hidden="true"></i>
+                    文集
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/HTML&CSS/">
+                          <i class="fa fa-html5" aria-hidden="true"></i>
+                          HTML/CSS
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/JavaScript/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          JavaScript
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/%E7%A7%BB%E5%8A%A8%E7%AB%AF/">
+                          <i class="fa fa-gg" aria-hidden="true"></i>
+                          移动端
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF/">
+                          <i class="fa fa-mixcloud" aria-hidden="true"></i>
+                          服务端
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                          <i class="fa fa-database" aria-hidden="true"></i>
+                          数据库
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/%E5%85%B6%E5%AE%83/">
+                          <i class="fa fa-leaf" aria-hidden="true"></i>
+                          其它
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/%E4%B9%A6%E5%8D%95/">
+                          <i class="fa fa-book" aria-hidden="true"></i>
+                          书单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/%E7%A8%8B%E5%BA%8F%E4%BA%BA%E7%94%9F/">
+                          <i class="fa fa-flag-o" aria-hidden="true"></i>
+                          程序人生
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/categories/%E9%97%AE%E7%AD%94/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-tripadvisor" aria-hidden="true"></i>
+                    问答
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/tools/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-cubes" aria-hidden="true"></i>
+                    开发工具
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/tags/%E7%94%9F%E6%B4%BB">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-slideshare" aria-hidden="true"></i>
+                    生活
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/picture/">
+                          <i class="fa fa-image" aria-hidden="true"></i>
+                          图库
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/music/">
+                          <i class="fa fa-music" aria-hidden="true"></i>
+                          歌单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/movie/">
+                          <i class="fa fa-video-camera" aria-hidden="true"></i>
+                          影集
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-twitch" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/about">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-meetup" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+        <!-- 文章内容 -->
+<div class="pattern-center-blank"></div>
+<!-- banner container -->
+<div class="banner-container no-img">
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+        
+            <div class="banner-content post-content no-post-image">
+                <div class="post-text">
+                    <div class="type-wrap">
+                        <a class="article-category-link" href="/categories/%E9%97%AE%E7%AD%94/">问答</a>
+                    </div>
+                    <h1 class="title-wrap">2019前端开发面试问题及答案整理（二）</h1>
+                    <div class="meta-wrap">
+                        <strong>Leatitia</strong>
+                        <span>发布于</span>
+                        
+  <a href="javascript:;" class="article-date">
+    <time datetime="2019-11-29T08:00:46.000Z" itemprop="datePublished">2019-11-29</time>
+  </a>
+
+                    </div>
+                </div>
+            </div>
+        
+    
+
+    
+    
+
+</div>
+
+<div class="body-container">
+    <article id="article-content" class="main-container article-content">
+        
+        
+
+        <div class="entry-content">
+            <h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><h3 id="1-优雅降级和渐进增强"><a href="#1-优雅降级和渐进增强" class="headerlink" title="1.优雅降级和渐进增强"></a>1.优雅降级和渐进增强</h3><ul>
+<li><strong>优雅降级</strong>：Web站点在所有新式浏览器中都能正常工作，如果用户使用的是老式浏览器，则代码会检查以确认它们是否能正常工作。由于IE独特的盒模型布局问题，针对不同版本的IE的hack实践过优雅降级了,为那些无法支持功能的浏览器增加候选方案，使之在旧式浏览器上以某种形式降级体验却不至于完全失效.</li>
+<li><strong>渐进增强</strong>：从被所有浏览器支持的基本功能开始，逐步地添加那些只有新式浏览器才支持的功能,向页面增加无害于基础浏览器的额外样式和功能的。当浏览器支持时，它们会自动地呈现出来并发挥作用。</li>
+</ul>
+<h2 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h2><h3 id="1-WEB应用从服务器主动推送Data到客户端有那些方式？"><a href="#1-WEB应用从服务器主动推送Data到客户端有那些方式？" class="headerlink" title="1.WEB应用从服务器主动推送Data到客户端有那些方式？"></a>1.WEB应用从服务器主动推送Data到客户端有那些方式？</h3><ul>
+<li><code>Javascript</code>数据推送</li>
+<li><code>Commet</code>：基于<code>HTTP</code>长连接的服务器推送技术</li>
+<li>基于<code>WebSocket</code>的推送方案</li>
+<li><code>SSE（Server-Send Event）</code>：服务器推送数据新方式</li>
+</ul>
+<h3 id="2-性能优化的方法"><a href="#2-性能优化的方法" class="headerlink" title="2.性能优化的方法"></a>2.性能优化的方法</h3><ul>
+<li>减少<code>http</code>请求次数：<code>CSS Sprites</code>,<code>JS</code>、<code>CSS</code>源码压缩、图片大小控制合适；网页<code>Gzip</code>，CDN托管，data缓存 ，图片服务器</li>
+<li>前端模板 JS+数据，减少由于HTML标签导致的带宽浪费，前端用变量保存AJAX请求结果，每次操作本地变量，不用请求，减少请求次数</li>
+<li>用<code>innerHTML</code>代替<code>DOM</code>操作，减少<code>DOM</code>操作次数，优化javascript性能。</li>
+<li>当需要设置的样式很多时设置<code>className</code>而不是直接操作<code>style</code>。</li>
+<li>少用全局变量、缓存<code>DOM</code>节点查找的结果。减少<code>IO</code>读取操作。</li>
+<li>避免使用<code>CSS Expression</code>（css表达式)又称<code>Dynamic properties</code>(动态属性)。</li>
+<li>图片预加载，将样式表放在顶部，将脚本放在底部  加上时间戳。</li>
+</ul>
+<h3 id="3-页面从输入-URL-到页面加载显示完成，这个过程中都发生了什么？"><a href="#3-页面从输入-URL-到页面加载显示完成，这个过程中都发生了什么？" class="headerlink" title="3.页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？"></a>3.页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？</h3><p>分为4个步骤：</p>
+<ul>
+<li>当发送一个URL请求时，不管这个URL是Web页面的URL还是Web页面上每个资源的URL，浏览器都会开启一个线程来处理这个请求，同时在远程DNS服务器上启动一个DNS查询。这能使浏览器获得请求对应的IP地址。</li>
+<li>浏览器与远程Web服务器通过TCP三次握手协商来建立一个TCP/IP连接。该握手包括一个同步报文，一个同步-应答报文和一个应答报文，这三个报文在 浏览器和服务器之间传递。该握手首先由客户端尝试建立起通信，而后服务器应答并接受客户端的请求，最后由客户端发出该请求已经被接受的报文。</li>
+<li>一旦TCP/IP连接建立，浏览器会通过该连接向远程服务器发送HTTP的GET请求。远程服务器找到资源并使用HTTP响应返回该资源，值为200的HTTP响应状态表示一个正确的响应。</li>
+<li>此时，Web服务器提供资源服务，客户端开始下载资源。请求返回后，便进入了我们关注的前端模块</li>
+</ul>
+<blockquote>
+<p>简单来说，浏览器会解析HTML生成DOM Tree，其次会根据CSS生成CSS Rule Tree，而javascript又可以根据DOM API操作DOM</p>
+</blockquote>
+<h3 id="4-javascript对象的几种创建方式"><a href="#4-javascript对象的几种创建方式" class="headerlink" title="4.javascript对象的几种创建方式"></a>4.javascript对象的几种创建方式</h3><ul>
+<li>工厂模式</li>
+<li>构造函数模式</li>
+<li>原型模式</li>
+<li>混合构造函数和原型模式</li>
+<li>动态原型模式</li>
+<li>寄生构造函数模式</li>
+<li>稳妥构造函数模式</li>
+</ul>
+<h3 id="5-javascript继承的6种方法"><a href="#5-javascript继承的6种方法" class="headerlink" title="5.javascript继承的6种方法"></a>5.javascript继承的6种方法</h3><ul>
+<li>原型链继承</li>
+<li>借用构造函数继承</li>
+<li>组合继承(原型+借用构造)</li>
+<li>原型式继承</li>
+<li>寄生式继承</li>
+<li>寄生组合式继承复制代码</li>
+</ul>
+<h3 id="6-Ajax"><a href="#6-Ajax" class="headerlink" title="6.Ajax"></a>6.<code>Ajax</code></h3><ul>
+<li>步骤<ul>
+<li>创建XMLHttpRequest对象,也就是创建一个异步调用对象.</li>
+<li>创建一个新的HTTP请求,并指定该HTTP请求的方法、URL及验证信息.</li>
+<li>设置响应HTTP请求状态变化的函数.</li>
+<li>发送HTTP请求.</li>
+<li>获取异步调用返回的数据.</li>
+<li>使用JavaScript和DOM实现局部刷新.</li>
+</ul>
+</li>
+</ul>
+<h3 id="7-异步加载和延迟加载"><a href="#7-异步加载和延迟加载" class="headerlink" title="7.异步加载和延迟加载"></a>7.异步加载和延迟加载</h3><ul>
+<li>异步加载的方案： <ul>
+<li>动态插入script标签</li>
+<li>通过ajax去获取js代码，然后通过eval执行</li>
+<li>script标签上添加defer或者async属性</li>
+<li>创建并插入iframe，让它异步执行js</li>
+</ul>
+</li>
+<li>延迟加载：有些 js 代码并不是页面初始化的时候就立刻需要的，而稍后的某些情况才需要的。</li>
+</ul>
+<h3 id="8-XSS与CSRF有什么区别吗？"><a href="#8-XSS与CSRF有什么区别吗？" class="headerlink" title="8.XSS与CSRF有什么区别吗？"></a>8.<code>XSS</code>与<code>CSRF</code>有什么区别吗？</h3><ul>
+<li><code>XSS</code>是获取信息，不需要提前知道其他用户页面的代码和数据包。CSRF是代替用户完成指定的动作，需要知道其他用户页面的代码和数据包。<br>要完成一次<code>CSRF</code>攻击，受害者必须依次完成两个步骤： <ul>
+<li>登录受信任网站A，并在本地生成Cookie</li>
+<li>在不登出A的情况下，访问危险网站B。</li>
+</ul>
+</li>
+</ul>
+<h3 id="9-并行下载资源"><a href="#9-并行下载资源" class="headerlink" title="9.并行下载资源"></a>9.并行下载资源</h3><p>IE6 两个并发，iE7升级之后的6个并发，之后版本也是6个<br>Firefox，chrome也是6个</p>
+<h3 id="10-继承怎么实现，如何避免原型链上面的对象共享"><a href="#10-继承怎么实现，如何避免原型链上面的对象共享" class="headerlink" title="10.继承怎么实现，如何避免原型链上面的对象共享"></a>10.继承怎么实现，如何避免原型链上面的对象共享</h3><p>用构造函数和原型链的混合模式去实现继承，避免对象共享可以参考经典的<code>extend()</code>函数，很多前端框架都有封装的，就是用一个空函数当做中间变量</p>
+<h3 id="10-前端代码性能优化工具-jS压缩"><a href="#10-前端代码性能优化工具-jS压缩" class="headerlink" title="10.前端代码性能优化工具-jS压缩"></a>10.前端代码性能优化工具-jS压缩</h3><p><code>grunt</code>，<code>YUI compressor</code> 和<code>google clojure</code>用来进行代码压缩的用法。<br><code>YUI Compressor</code>是一个用来压缩 JS 和 CSS 文件的工具，采用Java开发。</p>
+<p>使用方法：</p>
+<pre><code class="js">//压缩JS
+java -jar yuicompressor-2.4.2.jar --type js --charset utf-8 -v src.js &gt; packed.js
+//压缩CSS
+java -jar yuicompressor-2.4.2.jar --type css --charset utf-8 -v src.css &gt; packed.css</code></pre>
+<h3 id="11-Flash、Ajax优缺点"><a href="#11-Flash、Ajax优缺点" class="headerlink" title="11.Flash、Ajax优缺点"></a>11.<code>Flash</code>、<code>Ajax</code>优缺点</h3><ul>
+<li><strong>区别</strong><ul>
+<li><code>Flash</code>适合处理多媒体、矢量图形、访问机器；对CSS、处理文本上不足，不容易被搜索。</li>
+<li><code>Ajax</code>对<code>CSS</code>、文本支持很好，支持搜索；多媒体、矢量图形、机器访问不足。</li>
+</ul>
+</li>
+<li><strong>共同点</strong>：与服务器的无刷新传递消息、用户离线和在线状态、操作DOM复制代码</li>
+</ul>
+<h3 id="12-JavaScript-的同源策略"><a href="#12-JavaScript-的同源策略" class="headerlink" title="12.JavaScript 的同源策略"></a>12.JavaScript 的同源策略</h3><ul>
+<li><p><strong>概念</strong>:协议，域名，端口相同，同源策略是一种安全协议。 指一段脚本只能读取来自同一来源的窗口和文档的属性。</p>
+</li>
+<li><p><strong>同源限制</strong> ：同源策略是客户端脚本（尤其是Javascript）的重要的安全度量标准，其目的是防止某个文档或脚本从多个不同源装载。</p>
+<blockquote>
+<p>我们举例说明：比如一个黑客程序，他利用Iframe把真正的银行登录页面嵌到他的页面上，当你使用真实的用户名，密码登录时，他的页面就可以通过Javascript读取到你的表单中input中的内容，这样用户名，密码就轻松到手了。</p>
+</blockquote>
+</li>
+</ul>
+<p>什么是 “use strict”; ? 使用它的好处和坏处分别是什么？<br>ECMAscript 5添加了第二种运行模式：”严格模式”（strict mode）。顾名思义，这种模式使得Javascript在更严格的条件下运行。</p>
+<h3 id="13-GET和POST的区别"><a href="#13-GET和POST的区别" class="headerlink" title="13.GET和POST的区别"></a>13.<code>GET</code>和<code>POST</code>的区别</h3><ul>
+<li><code>GET</code>：一般用于信息获取，使用URL传递参数，对所发送信息的数量也有限制，一般在2000个字符。Get是通过地址栏来传值，需要使用<code>Request.QueryString</code>来取得变量的值</li>
+<li><code>POST</code>：一般用于修改服务器上的资源，对所发送的信息没有限制。Post是通过提交表单来传值，需要通过<code>Request.Form</code>来获取变量的值</li>
+</ul>
+<p>然而，在以下情况中，请使用 POST 请求：</p>
+<ul>
+<li>无法使用缓存文件（更新服务器上的文件或数据库）</li>
+<li>向服务器发送大量数据（POST 没有数据量限制）</li>
+<li>发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠复制代码</li>
+</ul>
+<h3 id="14-css阻塞，s阻塞"><a href="#14-css阻塞，s阻塞" class="headerlink" title="14.css阻塞，s阻塞"></a>14.css阻塞，s阻塞</h3><ul>
+<li><strong>js的阻塞特性：</strong>所有浏览器在下载JS的时候，会阻止一切其他活动，比如其他资源的下载，内容的呈现等等。直到JS下载、解析、执行完毕后才开始继续并行下载其他资源并呈现内容。为了提高用户体验，新一代浏览器都支持并行下载JS，但是JS下载仍然会阻塞其它资源的下载（例如.图片，css文件等）。</li>
+</ul>
+<p>由于浏览器为了防止出现JS修改DOM树，需要重新构建DOM树的情况，所以就会阻塞其他的下载和呈现。</p>
+<p>嵌入JS会阻塞所有内容的呈现，而外部JS只会阻塞其后内容的显示，2种方式都会阻塞其后资源的下载。也就是说外部样式不会阻塞外部脚本的加载，但会阻塞外部脚本的执行。</p>
+<ul>
+<li><strong>CSS阻塞：</strong>CSS本来是可以并行下载的，在什么情况下会出现阻塞加载了(在测试观察中，IE6下CSS都是阻塞加载）</li>
+</ul>
+<p>当CSS后面跟着嵌入的JS的时候，该CSS就会出现阻塞后面资源下载的情况。而当把嵌入JS放到CSS前面，就不会出现阻塞的情况了。</p>
+<blockquote>
+<p>根本原因：因为浏览器会维持html中css和js的顺序，样式表必须在嵌入的JS执行前先加载、解析完。而嵌入的JS会阻塞后面的资源加载，所以就会出现上面CSS阻塞下载的情况。</p>
+</blockquote>
+<p>嵌入JS应该放在什么位置？</p>
+<blockquote>
+<p>1、放在底部，虽然放在底部照样会阻塞所有呈现，但不会阻塞资源下载。<br>   2、如果嵌入JS放在head中，请把嵌入JS放在CSS头部。<br>   3、使用defer（只支持IE）<br>   4、不要在嵌入的JS中调用运行时间较长的函数，如果一定要用，可以用<code>setTimeout</code>来调用</p>
+</blockquote>
+<h3 id="15-Javascript无阻塞加载具体方式"><a href="#15-Javascript无阻塞加载具体方式" class="headerlink" title="15.Javascript无阻塞加载具体方式"></a>15.Javascript无阻塞加载具体方式</h3><ul>
+<li>将脚本放在底部。<code>&lt;link&gt;</code>还是放在<code>head</code>中，用以保证在js加载前，能加载出正常显示的页面。<code>&lt;script&gt;</code>标签放在<code>&lt;/body&gt;</code>前。</li>
+<li>成组脚本：由于每个<code>&lt;script&gt;</code>标签下载时阻塞页面解析过程，所以限制页面的<code>&lt;script&gt;</code>总数也可以改善性能。适用于内联脚本和外部脚本。</li>
+<li>非阻塞脚本：等页面完成加载后，再加载js代码。也就是，在<code>window.onload</code>事件发出后开始下载代码。 <blockquote>
+<p>（1）defer属性：支持IE4和fierfox3.5更高版本浏览器<br>（2）动态脚本元素：文档对象模型（DOM）允许你使用js动态创建HTML的几乎全部文档内容。代码如下：</p>
+</blockquote>
+</li>
+</ul>
+<pre><code class="html">&lt;script&gt;
+    var script=document.createElement(&quot;script&quot;);
+    script.type=&quot;text/javascript&quot;;
+    script.src=&quot;file.js&quot;;
+    document.getElementsByTagName(&quot;head&quot;)[0].appendChild(script);
+&lt;/script&gt;</code></pre>
+<p>此技术的重点在于：无论在何处启动下载，文件额下载和运行都不会阻塞其他页面处理过程。即使在head里（除了用于下载文件的http链接）。</p>
+<h3 id="16-闭包相关问题？"><a href="#16-闭包相关问题？" class="headerlink" title="16.闭包相关问题？"></a>16.闭包相关问题？</h3><h3 id="17-eval是做什么的？"><a href="#17-eval是做什么的？" class="headerlink" title="17.eval是做什么的？"></a>17.<code>eval</code>是做什么的？</h3><ul>
+<li><strong>功能</strong>：把对应的字符串解析成JS代码并运行；<blockquote>
+<p>应该避免使用eval，不安全，非常耗性能（2次，一次解析成js语句，一次执行）。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="18-JavaScript原型，原型链"><a href="#18-JavaScript原型，原型链" class="headerlink" title="18.JavaScript原型，原型链"></a>18.JavaScript原型，原型链</h3><ul>
+<li>原型对象也是普通的对象，是对象一个自带隐式的<code>__proto__</code>属性，原型也有可能有自己的原型，如果一个原型对象的原型不为<code>null</code>的话，我们就称之为原型链。</li>
+<li>原型链是由一些用来继承和共享属性的对象组成的（有限的）对象链</li>
+</ul>
+<h3 id="19-事件、事件机制"><a href="#19-事件、事件机制" class="headerlink" title="19.事件、事件机制"></a>19.事件、事件机制</h3><ul>
+<li>我们在网页中的某个操作（有的操作对应多个事件）。例如：当我们点击一个按钮就会产生一个事件。是可以被 JavaScript 侦测到的行为。</li>
+<li>事件处理机制：IE是事件冒泡、firefox同时支持两种事件模型，也就是：捕获型事件和冒泡型事件。</li>
+<li><code>ev.stopPropagation()</code>;注意旧ie的方法 <code>ev.cancelBubble = true;</code></li>
+</ul>
+<h3 id="20-ajax"><a href="#20-ajax" class="headerlink" title="20.ajax"></a>20.<code>ajax</code></h3><ul>
+<li><p><strong>readyState属性状态：</strong>  0=未初始化 ，1=启动 2=发送，3=接收，4=完成</p>
+</li>
+<li><p><strong>优点</strong></p>
+<ul>
+<li>通过异步模式，提升了用户体验</li>
+<li>优化了浏览器和服务器之间的传输，减少不必要的数据往返，减少了带宽占用</li>
+<li>Ajax在客户端运行，承担了一部分本来由服务器承担的工作，减少了大用户量下的服务器负载。</li>
+<li>Ajax可以实现动态不刷新（局部刷新）</li>
+</ul>
+</li>
+<li><p><strong>缺点</strong></p>
+<ul>
+<li>ajax不支持浏览器back按钮。</li>
+<li>安全问题 AJAX暴露了与服务器交互的细节。</li>
+<li>对搜索引擎的支持比较弱。</li>
+<li>破坏了程序的异常机制。</li>
+<li>不容易调试。</li>
+</ul>
+</li>
+</ul>
+<h3 id="21-js对象的深度克隆"><a href="#21-js对象的深度克隆" class="headerlink" title="21.js对象的深度克隆"></a>21.js对象的深度克隆</h3><pre><code class="js">function clone(Obj) {   
+        var buf;   
+        if (Obj instanceof Array) {   
+            buf = [];  //创建一个空的数组 
+            var i = Obj.length;   
+            while (i--) {   
+                buf[i] = clone(Obj[i]);   
+            }   
+            return buf;   
+        }else if (Obj instanceof Object){   
+            buf = {};  //创建一个空对象 
+            for (var k in Obj) {  //为这个对象添加新的属性 
+                buf[k] = clone(Obj[k]);   
+            }   
+            return buf;   
+        }else{   
+            return Obj;   
+        }   
+    }</code></pre>
+<h3 id="22-网站重构的理解？"><a href="#22-网站重构的理解？" class="headerlink" title="22.网站重构的理解？"></a>22.网站重构的理解？</h3><blockquote>
+<p>在不改变外部行为的前提下，简化结构、添加可读性，而在网站前端保持一致的行为。也就是说是在不改变UI的情况下，对网站进行优化，在扩展的同时保持一致的UI。</p>
+</blockquote>
+<h3 id="23-js数组去重"><a href="#23-js数组去重" class="headerlink" title="23.js数组去重"></a>23.js数组去重</h3><p>以下是数组去重的三种方法：</p>
+<pre><code class="js">Array.prototype.unique1 = function () {
+  var n = []; //一个新的临时数组
+  for (var i = 0; i &lt; this.length; i++) //遍历当前数组
+  {
+    //如果当前数组的第i已经保存进了临时数组，那么跳过，
+    //否则把当前项push到临时数组里面
+    if (n.indexOf(this[i]) == -1) n.push(this[i]);
+  }
+  return n;
+}</code></pre>
+<pre><code class="js">Array.prototype.unique2 = function()
+{
+    var n = {},r=[]; //n为hash表，r为临时数组
+    for(var i = 0; i &lt; this.length; i++) //遍历当前数组
+    {
+        if (!n[this[i]]) //如果hash表中没有当前项
+        {
+            n[this[i]] = true; //存入hash表
+            r.push(this[i]); //把当前数组的当前项push到临时数组里面
+        }
+    }
+    return r;
+}</code></pre>
+<pre><code class="js">Array.prototype.unique3 = function()
+{
+    var n = [this[0]]; //结果数组
+    for(var i = 1; i &lt; this.length; i++) //从第二项开始遍历
+    {
+        //如果当前数组的第i项在当前数组中第一次出现的位置不是i，
+        //那么表示第i项是重复的，忽略掉。否则存入结果数组
+        if (this.indexOf(this[i]) == i) n.push(this[i]);
+    }
+    return n;
+}</code></pre>
+<h3 id="24-HTTP状态码"><a href="#24-HTTP状态码" class="headerlink" title="24.HTTP状态码"></a>24.HTTP状态码</h3><ul>
+<li><p>100  Continue  继续，一般在发送post请求时，已发送了http header之后服务端将返回此信息，表示确认，之后发送具体参数信息</p>
+</li>
+<li><p>200  OK   正常返回信息</p>
+</li>
+<li><p>201  Created  请求成功并且服务器创建了新的资源</p>
+</li>
+<li><p>202  Accepted  服务器已接受请求，但尚未处理</p>
+</li>
+<li><p>301  Moved Permanently  请求的网页已永久移动到新位置。</p>
+</li>
+<li><p>302 Found  临时性重定向。</p>
+</li>
+<li><p>303 See Other  临时性重定向，且总是使用 GET 请求新的 URI。</p>
+</li>
+<li><p>304  Not Modified  自从上次请求后，请求的网页未修改过。</p>
+</li>
+<li><p>400 Bad Request  服务器无法理解请求的格式，客户端不应当尝试再次使用相同的内容发起请求。</p>
+</li>
+<li><p>401 Unauthorized  请求未授权。</p>
+</li>
+<li><p>403 Forbidden  禁止访问。</p>
+</li>
+<li><p>404 Not Found  找不到如何与 URI 相匹配的资源。</p>
+</li>
+<li><p>500 Internal Server Error  最常见的服务器端错误。</p>
+</li>
+<li><p>503 Service Unavailable 服务器端暂时无法处理请求（可能是过载或维护）。复制代码</p>
+</li>
+</ul>
+<h3 id="25-js操作获取和设置cookie"><a href="#25-js操作获取和设置cookie" class="headerlink" title="25.js操作获取和设置cookie"></a>25.js操作获取和设置cookie</h3><pre><code class="js">//创建cookie
+function setCookie(name, value, expires, path, domain, secure) {
+    var cookieText = encodeURIComponent(name) + &#39;=&#39; + encodeURIComponent(value);
+    if (expires instanceof Date) {
+        cookieText += &#39;; expires=&#39; + expires;
+    }
+    if (path) {
+        cookieText += &#39;; expires=&#39; + expires;
+    }
+    if (domain) {
+        cookieText += &#39;; domain=&#39; + domain;
+    }
+    if (secure) {
+        cookieText += &#39;; secure&#39;;
+    }
+    document.cookie = cookieText;
+}
+
+//获取cookie
+function getCookie(name) {
+    var cookieName = encodeURIComponent(name) + &#39;=&#39;;
+    var cookieStart = document.cookie.indexOf(cookieName);
+    var cookieValue = null;
+    if (cookieStart &gt; -1) {
+        var cookieEnd = document.cookie.indexOf(&#39;;&#39;, cookieStart);
+        if (cookieEnd == -1) {
+            cookieEnd = document.cookie.length;
+        }
+        cookieValue = decodeURIComponent(document.cookie.substring(cookieStart + cookieName.length, cookieEnd));
+    }
+    return cookieValue;
+}
+
+//删除cookie
+function unsetCookie(name) {
+    document.cookie = name + &quot;= ; expires=&quot; + new Date(0);
+}</code></pre>
+<h3 id="26-说说TCP传输的三次握手策略"><a href="#26-说说TCP传输的三次握手策略" class="headerlink" title="26.说说TCP传输的三次握手策略"></a>26.说说TCP传输的三次握手策略</h3><p>为了准确无误地把数据送达目标处，TCP协议采用了三次握手策略。用TCP协议把数据包送出去后，TCP不会对传送后的情况置之不理，它一定会向对方确认是否成功送达。握手过程中使用了TCP的标志：SYN和ACK。</p>
+<ul>
+<li>发送端首先发送一个带SYN标志的数据包给对方。</li>
+<li>接收端收到后，回传一个带有SYN/ACK标志的数据包以示传达确认信息。</li>
+<li>最后，发送端再回传一个带ACK标志的数据包，代表“握手”结束<br>若在握手过程中某个阶段莫名中断，TCP协议会再次以相同的顺序发送相同的数据包。复制代码</li>
+</ul>
+<h3 id="27-说说你对Promise的理解"><a href="#27-说说你对Promise的理解" class="headerlink" title="27.说说你对Promise的理解"></a>27.说说你对Promise的理解</h3><ul>
+<li><p><code>Promise</code>四种状态：</p>
+<ul>
+<li><code>pending</code>: 初始状态, 非 fulfilled 或 rejected.</li>
+<li><code>fulfilled</code>: 成功的操作.</li>
+<li><code>rejected</code>: 失败的操作.</li>
+<li><code>settled</code>: Promise已被fulfilled或rejected，且不是pending<br>另外， fulfilled 与 rejected 一起合称 settled。</li>
+</ul>
+</li>
+<li><p><code>Promise</code> 对象用来进行延迟(<code>deferred</code>) 和异步(<code>asynchronous</code> ) 计算。</p>
+</li>
+<li><p>Promise 的构造函数<br>构造一个 Promise，最基本的用法如下：</p>
+<pre><code class="js">var promise = new Promise(function(resolve, reject) {
+  if (...) {  // succeed
+      resolve(result);
+  } else {   // fails
+      reject(Error(errMessage));
+  }
+});</code></pre>
+</li>
+<li><p><code>Promise</code>实例拥有<code>then</code> 方法（具有 then 方法的对象，通常被称为 <code>thenable</code>）<br>使用方法：<code>promise.then(onFulfilled, onRejected)</code><br>接收两个函数作为参数，一个在 fulfilled 的时候被调用，一个在 <code>rejected</code>的时候被调用，接收参数就是 <code>future</code>，<code>onFulfilled</code>对应<code>resolve</code>, <code>onRejected</code>对应 <code>reject</code>。</p>
+</li>
+</ul>
+<h3 id="27-Javascript垃圾回收方法"><a href="#27-Javascript垃圾回收方法" class="headerlink" title="27.Javascript垃圾回收方法"></a>27.Javascript垃圾回收方法</h3><ul>
+<li>标记清除（mark and sweep）</li>
+</ul>
+<p>这是JavaScript最常见的垃圾回收方式，当变量进入执行环境的时候，比如函数中声明一个变量，垃圾回收器将其标记为“进入环境”，当变量离开环境的时候（函数执行结束）将其标记为“离开环境”。</p>
+<p>垃圾回收器会在运行的时候给存储在内存中的所有变量加上标记，然后去掉环境中的变量以及被环境中变量所引用的变量（闭包），在这些完成之后仍存在标记的就是要删除的变量了</p>
+<ul>
+<li>引用计数(reference counting)</li>
+</ul>
+<p>在低版本IE中经常会出现内存泄露，很多时候就是因为其采用引用计数方式进行垃圾回收。引用计数的策略是跟踪记录每个值被使用的次数，当声明了一个 变量并将一个引用类型赋值给该变量的时候这个值的引用次数就加1，如果该变量的值变成了另外一个，则这个值得引用次数减1，当这个值的引用次数变为0的时 候，说明没有变量在使用，这个值没法被访问了，因此可以将其占用的空间回收，这样垃圾回收器会在运行的时候清理掉引用次数为0的值占用的空间。</p>
+<p>在IE中虽然JavaScript对象通过标记清除的方式进行垃圾回收，但BOM与DOM对象却是通过引用计数回收垃圾的，也就是说只要涉及BOM及DOM就会出现循环引用问题。</p>
+<h3 id="28-谈谈性能优化问题"><a href="#28-谈谈性能优化问题" class="headerlink" title="28.谈谈性能优化问题"></a>28.谈谈性能优化问题</h3><ul>
+<li><p>代码层面：<br>避免使用css表达式，避免使用高级选择器，通配选择器。 缓存利用：缓存Ajax，使用CDN，使用外部js和css文件以便缓存，添加Expires头，服务端配置Etag，减少DNS查找等 请求数量：合并样式和脚本，使用css图片精灵，初始首屏之外的图片资源按需加载，静态资源延迟加载。 请求带宽：压缩文件，开启GZIP，</p>
+</li>
+<li><p>移动端性能优化<br>尽量使用css3动画，开启硬件加速。适当使用touch事件代替click事件。避免使用css3渐变阴影效果。 尽可能少的使用<code>box-shadow</code>与<code>gradients</code>。<code>box-shadow</code>与<code>gradients</code>往往都是页面的性能杀手</p>
+</li>
+</ul>
+<h3 id="29-什么是Etag？"><a href="#29-什么是Etag？" class="headerlink" title="29.什么是Etag？"></a>29.什么是<code>Etag</code>？</h3><p>浏览器下载组件的时候，会将它们存储到浏览器缓存中。如果需要再次获取相同的组件，浏览器将检查组件的缓存时间， 假如已经过期，那么浏览器将发送一个条件GET请求到服务器，服务器判断缓存还有效，则发送一个304响应， 告诉浏览器可以重用缓存组件。</p>
+<p>那么服务器是根据什么判断缓存是否还有效呢?答案有两种方式，一种是前面提到的<code>ETag</code>，另一种是根据<code>Last-Modified</code></p>
+<h3 id="30-Expires和Cache-Control"><a href="#30-Expires和Cache-Control" class="headerlink" title="30.Expires和Cache-Control"></a>30.<code>Expires</code>和<code>Cache-Control</code></h3><p>Expires要求客户端和服务端的时钟严格同步。HTTP1.1引入<code>Cache-Control</code>来克服<code>Expires</code>头的限制。如果<code>max-age</code>和<code>Expires</code>同时出现，则max-age有更高的优先级。</p>
+<p>Cache-Control: no-cache, private, max-age=0<br>ETag: abcde<br>Expires: Thu, 15 Apr 2014 20:00:00 GMT<br>Pragma: private<br>Last-Modified: $now // RFC1123 format</p>
+<h3 id="31-栈和队列的区别"><a href="#31-栈和队列的区别" class="headerlink" title="31.栈和队列的区别?"></a>31.栈和队列的区别?</h3><p>栈的插入和删除操作都是在一端进行的，而队列的操作却是在两端进行的。<br>队列先进先出，栈先进后出。<br>栈只允许在表尾一端进行插入和删除，而队列只允许在表尾一端进行插入，在表头一端进行删除</p>
+<h3 id="32-栈和堆的区别？"><a href="#32-栈和堆的区别？" class="headerlink" title="32.栈和堆的区别？"></a>32.栈和堆的区别？</h3><p>栈区（stack）—   由编译器自动分配释放   ，存放函数的参数值，局部变量的值等。<br>堆区（heap）   —   一般由程序员分配释放，   若程序员不释放，程序结束时可能由OS回收。<br>堆（数据结构）：堆可以被看成是一棵树，如：堆排序；<br>栈（数据结构）：一种先进后出的数据结构。复制代码</p>
+<h3 id="33-关于Http-2-0-你知道多少？"><a href="#33-关于Http-2-0-你知道多少？" class="headerlink" title="33.关于Http 2.0 你知道多少？"></a>33.关于Http 2.0 你知道多少？</h3><p>HTTP/2引入了“服务端推（serverpush）”的概念，它允许服务端在客户端需要数据之前就主动地将数据发送到客户端缓存中，从而提高性能。 HTTP/2提供更多的加密支持 HTTP/2使用多路技术，允许多个消息在一个连接上同时交差。 它增加了头压缩（header compression），因此即使非常小的请求，其请求和响应的header都只会占用很小比例的带宽。</p>
+
+        </div>
+
+        <div class="article-footer">
+            <i class="fa fa-tags"></i>
+            
+                <a href="/tags/%E9%97%AE%E7%AD%94/">问答<em>·</em></a>
+            
+                <a href="/tags/Hot/">Hot<em>·</em></a>
+            
+        </div>
+
+        <div class="article-navs">
+            <!-- page container -->
+
+  
+    <nav class="card-container card-article-nav">
+      <div class="card-wrap">
+        
+          <div class="card-item">
+            <article>
+              
+              <a class="card-link article-nav-link" href="/2019/11/30/js%E9%9D%A2%E8%AF%95%E9%A2%98/"></a>
+              <div class="article-nav-caption">Newer</div>
+              <div class="article-nav-title">js面试题</div>
+            </article>
+          </div>
+        
+        
+          <div class="card-item">
+            <article>
+              
+              <a class="card-link article-nav-link" href="/2019/11/27/2019%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98%E5%8F%8A%E7%AD%94%E6%A1%88%E6%95%B4%E7%90%86/"></a>
+              <div class="article-nav-caption">Older</div>
+              <div class="article-nav-title">2019前端开发面试问题及答案整理</div>
+            </article>
+          </div>
+        
+      </div>
+    </nav>
+  
+
+
+        </div>
+        
+
+    </article>
+</div>
+
+
+    </div>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            // PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Leatitia<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+    <div class="site-info">
+        <div class="footertext">
+            <div class="img-preload">
+                <img src="/images/others/wordpress-rotating-ball-o.svg">
+                <img src="/images/others/disqus-preloader.svg">
+            </div>
+            <p style="color: #666666;">&copy 2019 OK-girl</p>
+        </div>
+        <div class="footer-device">
+            <!--<p style="font-family: 'Ubuntu', sans-serif;">-->
+            <!--<span style="color: #b9b9b9;">Powered by <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">hexo-theme-sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i>-->
+            <!--</span>-->
+            <!--</p>-->
+        </div>
+    </div><!-- .site-info -->
+</footer>
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+    /* <![CDATA[ */
+    if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+        var Poi = {
+            "pjax": "1",
+            "movies": {"url": "/video", "name": "ban1.mp4,ban2.mp4", "live": "close"},
+            "windowheight": "fixed",
+            "codelamp": "close",
+            "ajaxurl": "",
+            "order": "asc",
+            "formpostion": "bottom"
+        };
+    } else {
+        var Poi = {
+            "pjax": "1",
+            "movies": {"url": "/video", "name": "ban1.mp4,ban2.mp4", "live": "open"},
+            "windowheight": "auto",
+            "codelamp": "close",
+            "ajaxurl": "",
+            "order": "asc",
+            "formpostion": "bottom"
+        };
+    }
+    /* ]]> */
+
+</script>
+<script>
+    $(document).ready(function () {
+        if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+            if ($(".pattern-center").length > 0) { //有图的情况
+                tocbot.init({
+                    // Where to render the table of contents.
+                    tocSelector: '.toc', // 放置目录的容器
+                    // Where to grab the headings to build the table of contents.
+                    contentSelector: '.entry-content', // 正文内容所在
+                    // Which headings to grab inside of the contentSelector element.
+                    scrollSmooth: true,
+                    headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+                    headingsOffset: -400,
+                    scrollSmoothOffset: -85
+                });
+            } else {
+                tocbot.init({
+                    // Where to render the table of contents.
+                    tocSelector: '.toc', // 放置目录的容器
+                    // Where to grab the headings to build the table of contents.
+                    contentSelector: '.entry-content', // 正文内容所在
+                    // Which headings to grab inside of the contentSelector element.
+                    scrollSmooth: true,
+                    headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+                    headingsOffset: -85,
+                    scrollSmoothOffset: -85
+                });
+            }
+            var offsetTop = $('.toc').offset().top - 95;
+            window.onscroll = function () {
+                var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+                if (scrollTop >= offsetTop) {
+                    $('.toc').addClass('toc-fixed');
+                } else {
+                    $('.toc').removeClass('toc-fixed');
+                }
+            }
+        }
+    });
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+        <div class="iconflat no-select" style="width: 50px; height: 50px;">
+            <div class="icon"></div>
+        </div>
+        <div class="site-branding search-form-submit">
+            <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+        </div>
+    </div>
+</section>
+</body>
+</html>
