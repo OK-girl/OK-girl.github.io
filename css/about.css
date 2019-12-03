@@ -1446,7 +1446,7 @@ a {
 }
 
 .header-bg {
-    background-image: url(../images/assets/header-bg-1.jpg);
+    background-image: url(http://ok-girl.gitee.io/ok-girl.blog/images/assets/header-bg-1.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -1641,7 +1641,7 @@ a {
 }
 
 /*====================
-** Counter 
+** Counter
 ====================*/
 .counter-section {
     padding-top: 94px;
@@ -2052,7 +2052,7 @@ section.blog-area {
 }
 
 /*====================
-** Contact 
+** Contact
 ====================*/
 .contact-area {
     background-color: #eee;
@@ -2114,7 +2114,7 @@ section.blog-area {
 }
 
 /*==================
-** preloader 
+** preloader
 ===================*/
 .preloader {
     position: fixed;
@@ -2316,7 +2316,7 @@ section.blog-area {
 }
 
 /*==================
-** Footer  
+** Footer
 ===================*/
 .footer-area {
     padding-top: 25px;

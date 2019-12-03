@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 #veditor {
-    background-image: url(../images/others/comment-bg.png);
+    background-image: url(http://ok-girl.gitee.io/ok-girl.blog/images/others/comment-bg.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
@@ -144,7 +144,7 @@ audio:not([controls]) {
 a {
     background-color: transparent;
     text-decoration: none;
-    cursor: url(../images/others/cur_link.cur), auto
+    cursor: url(http://ok-girl.gitee.io/ok-girl.blog/images/others/cur_link.cur), auto
 }
 
 a:active, a:hover {
@@ -152,7 +152,7 @@ a:active, a:hover {
 }
 
 a:active {
-    cursor: url(../images/others/cur_active.cur), alias
+    cursor: url(http://ok-girl.gitee.io/ok-girl.blog/images/others/cur_active.cur), alias
 }
 
 abbr[title] {
@@ -307,7 +307,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
     margin-bottom: 1.5em;
-    cursor: url(../images/others/cur_text.cur), auto
+    cursor: url(http://ok-girl.gitee.io/ok-girl.blog/images/others/cur_text.cur), auto
 }
 
 dfn, cite, em, i {
@@ -412,7 +412,7 @@ html {
 body {
     background: #fff;
     background-attachment: fixed;
-    cursor: url(../images/others/cur_normal.cur), auto
+    cursor: url(http://ok-girl.gitee.io/ok-girl.blog/images/others/cur_normal.cur), auto
 }
 
 blockquote:before, blockquote:after, q:before, q:after {
@@ -603,15 +603,15 @@ a:hover, a:active {
 }
 
 .video-play, .loadvideo {
-    background-image: url(../images/others/video_play.png)
+    background-image: url(http://ok-girl.gitee.io/ok-girl.blog/images/others/video_play.png)
 }
 
 .video-pause {
-    background-image: url(../images/others/video_pause.png)
+    background-image: url(http://ok-girl.gitee.io/ok-girl.blog/images/others/video_pause.png)
 }
 
 #video-add {
-    background-image: url(../images/others/video_add.png);
+    background-image: url(http://ok-girl.gitee.io/ok-girl.blog/images/others/video_add.png);
     bottom: 45px;
     display: none
 }
@@ -1858,7 +1858,7 @@ i.iconfont.hotpost {
 }
 
 .entry-content a {
-    color: #e67474;
+    color: #0095a4;
     text-decoration: underline dotted rgba(0, 0, 0, .1)
 }
 
@@ -1976,11 +1976,11 @@ h1.page-title.mb- {
     z-index: 99;
     width: 70px;
     height: 900px;
-    background: url(../images/others/scroll.png) no-repeat center;
+    background: url(http://ok-girl.gitee.io/ok-girl.blog/images/others/scroll.png) no-repeat center;
     background-size: contain;
     -webkit-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
-    cursor: url(../images/others/cur_pointer.cur), auto;
+    cursor: url(http://ok-girl.gitee.io/ok-girl.blog/images/others/cur_pointer.cur), auto;
     opacity: 1
 }
 
@@ -2674,7 +2674,7 @@ h1.page-title.mb- {
     height: 40px;
     text-align: center;
     line-height: 45px;
-    background-image: url(../images/others/disqus-preloader.svg);
+    background-image: url(http://ok-girl.gitee.io/ok-girl.blog/images/others/disqus-preloader.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto 100%
@@ -3064,13 +3064,13 @@ header.page-header {
     border-radius: 100%
 }
 
-.links ul li:hover img {
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    -ms-transform: rotate(360deg)
-}
+/*.links ul li:hover img {*/
+    /*transform: rotate(360deg);*/
+    /*-webkit-transform: rotate(360deg);*/
+    /*-moz-transform: rotate(360deg);*/
+    /*-o-transform: rotate(360deg);*/
+    /*-ms-transform: rotate(360deg)*/
+/*}*/
 
 span.sitename {
     color: orange;
@@ -3610,7 +3610,7 @@ a.page-numbers {
 }
 
 .comment-respond textarea {
-    background-image: url(../images/others/comment-bg.png);
+    background-image: url(http://ok-girl.gitee.io/ok-girl.blog/images/others/comment-bg.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
@@ -4011,7 +4011,7 @@ li.feature-2 {
 
     .top-social_v2 li {
         margin-right: 0px !important;
-        cursor: url(../images/others/cur_link.cur), auto !important;
+        cursor: url(http://ok-girl.gitee.io/ok-girl.blog/images/others/cur_link.cur), auto !important;
     }
 }
 
@@ -4795,7 +4795,7 @@ i.iconfont.down {
 }
 
 #pagination .loading {
-    background: url(../images/others/wordpress-rotating-ball-o.svg);
+    background: url(http://ok-girl.gitee.io/ok-girl.blog/images/others/wordpress-rotating-ball-o.svg);
     background-position: center;
     background-repeat: no-repeat;
     color: #555;
@@ -5884,7 +5884,7 @@ i.iconfont.down {
     border: 0;
     color: #fff;
     line-height: 1;
-    cursor: url(../images/others/cur_pointer.cur), auto;
+    cursor: url(http://ok-girl.gitee.io/ok-girl.blog/images/others/cur_pointer.cur), auto;
     font-size: 14px;
     font-weight: 500;
     padding: 7px 15px;
@@ -6035,7 +6035,7 @@ button.botui-actions-buttons-button::-moz-focus-inner, input.botui-actions-text-
 }
 
 button.botui-actions-buttons-button {
-    cursor: url(../images/others/cur_pointer.cur), auto;
+    cursor: url(http://ok-girl.gitee.io/ok-girl.blog/images/others/cur_pointer.cur), auto;
     -webkit-appearance: button
 }
 
@@ -7476,7 +7476,7 @@ a.toc-link {
 }
 
 #emotion-toggle, .emotion-box, .on-hover, .emotion-item, .emoji-item, .tieba-container span {
-    cursor: url(../images/others/cur_pointer.cur), auto
+    cursor: url(http://ok-girl.gitee.io/ok-girl.blog/images/others/cur_pointer.cur), auto
 }
 
 .alignright {
@@ -7920,7 +7920,7 @@ a.toc-link {
     padding: 2px;
     text-shadow: none;
     border-radius: 0 0 5px 5px;
-    cursor: url(../images/others/cur_text.cur), auto
+    cursor: url(http://ok-girl.gitee.io/ok-girl.blog/images/others/cur_text.cur), auto
 }
 
 .hljs {
@@ -8271,7 +8271,7 @@ img[src*="#in-center"] {
 #banner_wave_1 {
     width: auto;
     height: 65px;
-    background: url(../images/others/wave1.png) repeat-x;
+    background: url(http://ok-girl.gitee.io/ok-girl.blog/images/others/wave1.png) repeat-x;
     position: absolute;
     bottom: 0;
     width: 400%;
@@ -8285,7 +8285,7 @@ img[src*="#in-center"] {
 #banner_wave_2 {
     width: auto;
     height: 80px;
-    background: url(../images/others/wave2.png) repeat-x;
+    background: url(http://ok-girl.gitee.io/ok-girl.blog/images/others/wave2.png) repeat-x;
     position: absolute;
     bottom: 0;
     width: 400%;
@@ -8942,6 +8942,9 @@ td.hljs-ln-numbers {
     background-image: linear-gradient(234deg, #394245 0%, #000 100%);
 }
 
+.card-container .card-wrap .card-item a {
+    color: #ffffff;
+}
 .card-container .card-wrap .card-item article {
     position: relative;
     z-index: 0;
@@ -9141,9 +9144,6 @@ td.hljs-ln-numbers {
 .main-container.article-list {
     background-color: transparent;
     padding: 0;
-}
-.main-container a{
-    color: #ffffff;
 }
 
 .card-container.card-articles .article-link {
