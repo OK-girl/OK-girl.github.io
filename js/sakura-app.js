@@ -188,10 +188,10 @@ function imgError(ele, type) {
             break
         case 3:
 
-            ele.src = '/images/image-404.png'
+            ele.src = 'http://ok-girl.gitee.io/ok-girl.blog/images/image-404.png'
             break
         default:
-            ele.src = '/images/image-404.png'
+            ele.src = 'http://ok-girl.gitee.io/ok-girl.blog/images/image-404.png'
     }
 }
 
