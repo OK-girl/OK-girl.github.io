@@ -135,7 +135,7 @@
       <span class="site-title">
         <span class="logolink moe-mashiro">
           <a href="/">
-            <span class="sakurasono">OK-girl</span>
+            <span class="sakurasono"><img src="/images/logo.png" alt=""></span>
             <span class="shironeko">大胖</span>
           </a>
         </span>
@@ -179,7 +179,7 @@
                   <ul class="sub-menu">
                     
                       <li>
-                        <a href="/categories/HTML&CSS/">
+                        <a href="/categories/HTML-CSS/">
                           <i class="fa fa-html5" aria-hidden="true"></i>
                           HTML/CSS
                         </a>
@@ -249,10 +249,10 @@
               </li>
             
               <li>
-                <a href="/tools/">
+                <a href="/tags/%E7%99%BE%E5%AE%9D%E7%AE%B1">
                   <span class="faa-parent animated-hover">
                     <i class="fa  fa-cubes" aria-hidden="true"></i>
-                    开发工具
+                    百宝箱
                   </span>
                 </a>
                 
@@ -351,65 +351,9 @@
 
 <div id="content" class="site-content">
   <article class="post-item post-301 page type-page status-publish has-post-thumbnail hentry">
-    <p>都是认真分享出来的哦♪(^∇^*) ꉂ(ˊᗜˋ)</p>
+    <p>工欲善其事必先利其器，好收藏都是认真分享出来的哦♪(^∇^*) ꉂ(ˊᗜˋ)</p>
     
       <div class="links">
-        
-          <h3 class="link-title"><span class="fake-title">UI配色</span></h3>
-          
-            <div class="link-description">色彩搭配、色值转换利器 < (￣︶￣)></div>
-          
-          <ul class="link-items fontSmooth">
-            
-              <li class="link-item">
-                <a class="link-item-inner effect-apollo" href="https://tool.css-js.com/rgba.html" title="前端在线工具" target="_blank" rel="friend">
-                  <img class="lazyload" onerror="imgError(this,1)" src="http://ok-girl.gitee.io/ok-girl.blog/images/others/loading.svg" data-src="images/css-js.svg" src="images/css-js.svg">
-                  <span class="sitename">
-                  Css-js</span>
-                  <div class="linkdes">
-                    前端在线工具</div>
-                </a>
-              </li>
-            
-              <li class="link-item">
-                <a class="link-item-inner effect-apollo" href="https://color.adobe.com/zh/create" title="超全的" target="_blank" rel="friend">
-                  <img class="lazyload" onerror="imgError(this,1)" src="http://ok-girl.gitee.io/ok-girl.blog/images/others/loading.svg" data-src="images/fields.svg" src="images/fields.svg">
-                  <span class="sitename">
-                  Adobe Color</span>
-                  <div class="linkdes">
-                    超全的</div>
-                </a>
-              </li>
-            
-          </ul>
-        
-          <h3 class="link-title"><span class="fake-title">代码编辑器</span></h3>
-          
-            <div class="link-description">力荐的哟~ 使用上特满意的 ꉂ(ˊᗜˋ)</div>
-          
-          <ul class="link-items fontSmooth">
-            
-              <li class="link-item">
-                <a class="link-item-inner effect-apollo" href="http://www.jetbrains.com/webstorm/download/" title="“Web前端开发神器”、“最智能的JavaScript IDE”" target="_blank" rel="friend">
-                  <img class="lazyload" onerror="imgError(this,1)" src="http://ok-girl.gitee.io/ok-girl.blog/images/others/loading.svg" data-src="images/webstorm.svg" src="images/webstorm.svg">
-                  <span class="sitename">
-                  Webstorm</span>
-                  <div class="linkdes">
-                    “Web前端开发神器”、“最智能的JavaScript IDE”</div>
-                </a>
-              </li>
-            
-              <li class="link-item">
-                <a class="link-item-inner effect-apollo" href="https://www.editplus.com" title="可取代记事本的文字编辑器" target="_blank" rel="friend">
-                  <img class="lazyload" onerror="imgError(this,1)" src="http://ok-girl.gitee.io/ok-girl.blog/images/others/loading.svg" data-src="images/fields.svg" src="images/fields.svg">
-                  <span class="sitename">
-                  Ediplus</span>
-                  <div class="linkdes">
-                    可取代记事本的文字编辑器</div>
-                </a>
-              </li>
-            
-          </ul>
         
           <h3 class="link-title"><span class="fake-title">素材收集</span></h3>
           
@@ -480,7 +424,7 @@
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="ins-section-wrapper">
@@ -492,10 +436,10 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Posts',
-            // PAGES: 'Pages',
-            CATEGORIES: 'Categories',
-            TAGS: 'Tags',
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
         },
         ROOT_URL: '/',
         <!--CONTENT_URL: '',-->
@@ -521,6 +465,24 @@
                 <img src="http://ok-girl.gitee.io/ok-girl.blog/images/others/disqus-preloader.svg">
             </div>
             <p style="color: #666666;">&copy 2019 OK-girl</p>
+            <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+            <script>
+                var now = new Date();
+                function createtime() {
+                    var grt= new Date("08/10/2019 17:38:00");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
+                    now.setTime(now.getTime()+250);
+                    days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+                    hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+                    if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+                    mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+                    seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+                    snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+                    document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+                    document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+                }
+                setInterval("createtime()",250);
+            </script>
+
         </div>
         <div class="footer-device">
             <!--<p style="font-family: 'Ubuntu', sans-serif;">-->
@@ -610,6 +572,24 @@
             }
         }
     });
+    <!--浏览器搞笑标题-->
+    var OriginTitle = document.title;
+    var titleTime;
+    document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+            $('[rel="icon"]').attr('href', "/img/trhx2.png");
+            document.title = 'ヽ(●-`Д´-)ノ你丑你就走！';
+            clearTimeout(titleTime);
+        }
+        else {
+            $('[rel="icon"]').attr('href', "/img/trhx2.png");
+            document.title = 'ヾ(Ő∀Ő3)ノ你帅就回来！' + OriginTitle;
+            titleTime = setTimeout(function () {
+                document.title = OriginTitle;
+            }, 2000);
+        }
+    });
+
 </script>
 
     <div class="openNav no-select" style="height: 50px;">

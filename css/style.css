@@ -322,31 +322,11 @@ blockquote {
     position: relative;
 }
 
-blockquote:before {
-    content: "\f10d" !important;
-    font-size: 1rem;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    color: #dddfe4;
-    font-family: FontAwesome
-}
-
-blockquote:after {
-    content: '\f10e' !important;
-    font-size: 1rem;
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    color: #dddfe4;
-    font-family: FontAwesome
-}
-
 blockquote p {
     margin: 5px 0;
     padding: 10px 30px;
-    background-color: #eef0f4;
-    border-left: 8px solid #dddfe4;
+    background-color: #f9f9f9;
+    border-left: 8px solid #e67e22;
 }
 
 address {
@@ -515,7 +495,7 @@ textarea {
 }
 
 a {
-    color: #e67474;
+    color: #e67e22;
     outline: 0;
     -webkit-transition: color .2s ease-out, border .2s ease-out, opacity .2s ease-out;
     -moz-transition: color .2s ease-out, border .2s ease-out, opacity .2s ease-out;
@@ -1444,14 +1424,15 @@ i.iconfont.hotpost {
 }
 
 .post-list-thumb .button-normal {
-    color: #333;
-    background-color: #ffbc6d;
-    padding: 6px 10px;
+    color: #fff;
+    background-color: orange;
+    padding: 4px 8px;
     border-radius: 4px;
+    font-size: 14px;
 }
 
 .post-list-thumb .button-normal:hover, .post-list-thumb .button-normal:hover {
-    background-color: orange;
+    background-color: #e67e22;
     color: #ffffff;
 }
 
@@ -1823,7 +1804,7 @@ i.iconfont.hotpost {
 .entry-content h2:after {
     content: "\00B6";
     position: absolute;
-    color: #ff6d6d;
+    color: #f05735;
     font-family: Arial, 'Microsoft Yahei', 'WenQuanYi Micro Hei', sans-serif;
     padding-left: 6px;
     font-size: 1.03em
@@ -1832,7 +1813,7 @@ i.iconfont.hotpost {
 .serif .entry-content h2:after {
     content: "\00B6";
     position: absolute;
-    color: #ff6d6d;
+    color: #f05735;
     font-family: Arial, 'Microsoft Yahei', 'WenQuanYi Micro Hei', sans-serif;
     padding-left: 6px;
     font-size: 1.13em
@@ -1842,21 +1823,21 @@ i.iconfont.hotpost {
     content: "#";
     left: 0;
     position: absolute;
-    color: #ff6d6d
+    color: #f05735
 }
 
 .entry-content h4:after {
     content: "▌";
     left: 0;
     position: absolute;
-    color: #ff6d6d
+    color: #f05735
 }
 
 .entry-content h5:after {
     content: "♯";
     left: 0;
     position: absolute;
-    color: #ff6d6d
+    color: #f05735
 }
 
 .entry-content code {
@@ -1877,7 +1858,7 @@ i.iconfont.hotpost {
 }
 
 .entry-content a:hover {
-    color: orange;
+    color: #e67e22;
     text-decoration: underline orange
 }
 
@@ -5967,14 +5948,14 @@ i.iconfont.down {
 .popcontainer h4:before {
     content: " ";
     margin-right: 0;
-    color: #ff6d6d
+    color: #f05735
 }
 
 .popcontainer h4:after {
     content: " ";
     left: 0;
     position: absolute;
-    color: #ff6d6d
+    color: #f05735
 }
 
 .slide-fade-enter-active {
@@ -6179,22 +6160,28 @@ button.botui-actions-buttons-button {
 }
 
 .logolink .sakurasono {
-    background-color: rgba(255, 255, 255, .5);
+    /*background-color: orange;*/
     border-radius: 5px;
-    color: #464646;
+    color: #ffffff;
     height: auto;
     line-height: 25px;
     margin-right: 0;
-    padding-bottom: 0;
-    padding-top: 1px;
+    padding: 2px 8px;
     text-size-adjust: 100%;
     width: auto
 }
-
-.logolink a:hover .sakurasono {
-    background-color: orange;
-    color: #fff
+.logolink .sakurasono img{
+    margin-top: 0;
 }
+
+.logolink .shironeko{
+    color: orange;
+}
+
+/*.logolink a:hover .sakurasono {*/
+    /*background-color: orange;*/
+    /*color: #fff*/
+/*}*/
 
 .logolink a:hover .shironeko, .logolink a:hover rt {
     color: orange
@@ -8547,10 +8534,10 @@ td.hljs-ln-numbers {
     background-color: #eff3f5;
 }
 .article-footer{
-    color: #63a8f5;
+    color: #008fd1;
 }
 .article-footer a {
-    color: #63a8f5 !important;
+    color: #008fd1 !important;
 }
 
 .article-footer a:hover {
@@ -9031,9 +9018,9 @@ td.hljs-ln-numbers {
 
 .card-container.card-articles .card-item article {
     margin: 8px;
-    padding: 40px 38px 45px;
+    padding: 22px 34px 26px;
     min-width: 332px;
-    min-height: 350px;
+    min-height: 328px;
     border-radius: 24px;
 }
 
@@ -9444,6 +9431,7 @@ td.hljs-ln-numbers {
 .banner-container .title-sub-wrap {
     padding-bottom: 20px;
     font-size: 18px;
+    color: #cfcfcf;
 }
 
 .banner-container .banner-content {

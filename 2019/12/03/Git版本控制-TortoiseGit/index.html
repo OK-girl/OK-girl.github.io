@@ -135,7 +135,7 @@
       <span class="site-title">
         <span class="logolink moe-mashiro">
           <a href="/">
-            <span class="sakurasono">OK-girl</span>
+            <span class="sakurasono"><img src="/images/logo.png" alt=""></span>
             <span class="shironeko">大胖</span>
           </a>
         </span>
@@ -179,7 +179,7 @@
                   <ul class="sub-menu">
                     
                       <li>
-                        <a href="/categories/HTML&CSS/">
+                        <a href="/categories/HTML-CSS/">
                           <i class="fa fa-html5" aria-hidden="true"></i>
                           HTML/CSS
                         </a>
@@ -249,10 +249,10 @@
               </li>
             
               <li>
-                <a href="/tools/">
+                <a href="/tags/%E7%99%BE%E5%AE%9D%E7%AE%B1">
                   <span class="faa-parent animated-hover">
                     <i class="fa  fa-cubes" aria-hidden="true"></i>
-                    开发工具
+                    百宝箱
                   </span>
                 </a>
                 
@@ -419,12 +419,21 @@ helper = store</code></pre><p>当推送项目到Gitlab等在线仓库时，会�
     <nav class="card-container card-article-nav">
       <div class="card-wrap">
         
+          <div class="card-item">
+            <article>
+              
+              <a class="card-link article-nav-link" href="/2019/12/05/Github-jsDelivr-picGo%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/"></a>
+              <div class="article-nav-caption">上一篇</div>
+              <div class="article-nav-title">Github+jsDelivr+picGo搭建免费图床</div>
+            </article>
+          </div>
+        
         
           <div class="card-item">
             <article>
               
               <a class="card-link article-nav-link" href="/2019/12/02/%E4%BD%BF%E7%94%A8gitee%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/"></a>
-              <div class="article-nav-caption">Older</div>
+              <div class="article-nav-caption">下一篇</div>
               <div class="article-nav-title">使用gitee搭建免费图床</div>
             </article>
           </div>
@@ -460,7 +469,7 @@ helper = store</code></pre><p>当推送项目到Gitlab等在线仓库时，会�
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="ins-section-wrapper">
@@ -472,10 +481,10 @@ helper = store</code></pre><p>当推送项目到Gitlab等在线仓库时，会�
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Posts',
-            // PAGES: 'Pages',
-            CATEGORIES: 'Categories',
-            TAGS: 'Tags',
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
         },
         ROOT_URL: '/',
         <!--CONTENT_URL: '',-->
@@ -501,6 +510,24 @@ helper = store</code></pre><p>当推送项目到Gitlab等在线仓库时，会�
                 <img src="http://ok-girl.gitee.io/ok-girl.blog/images/others/disqus-preloader.svg">
             </div>
             <p style="color: #666666;">&copy 2019 OK-girl</p>
+            <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+            <script>
+                var now = new Date();
+                function createtime() {
+                    var grt= new Date("08/10/2019 17:38:00");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
+                    now.setTime(now.getTime()+250);
+                    days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+                    hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+                    if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+                    mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+                    seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+                    snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+                    document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+                    document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+                }
+                setInterval("createtime()",250);
+            </script>
+
         </div>
         <div class="footer-device">
             <!--<p style="font-family: 'Ubuntu', sans-serif;">-->
@@ -590,6 +617,24 @@ helper = store</code></pre><p>当推送项目到Gitlab等在线仓库时，会�
             }
         }
     });
+    <!--浏览器搞笑标题-->
+    var OriginTitle = document.title;
+    var titleTime;
+    document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+            $('[rel="icon"]').attr('href', "/img/trhx2.png");
+            document.title = 'ヽ(●-`Д´-)ノ你丑你就走！';
+            clearTimeout(titleTime);
+        }
+        else {
+            $('[rel="icon"]').attr('href', "/img/trhx2.png");
+            document.title = 'ヾ(Ő∀Ő3)ノ你帅就回来！' + OriginTitle;
+            titleTime = setTimeout(function () {
+                document.title = OriginTitle;
+            }, 2000);
+        }
+    });
+
 </script>
 
     <div class="openNav no-select" style="height: 50px;">
